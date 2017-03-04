@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -159,7 +159,7 @@ class ErrorHandler
         return $handler;
     }
 
-    public function __construct(BufferingLogger $bootstrappingLogger = null)
+    public function __construct(?BufferingLogger $bootstrappingLogger = null)
     {
         if ($bootstrappingLogger) {
             $this->bootstrappingLogger = $bootstrappingLogger;
@@ -388,7 +388,7 @@ class ErrorHandler
      *
      * @internal
      */
-    public function handleError($type, $message, $file, $line, array $context, array $backtrace = null)
+    public function handleError($type, $message, $file, $line, array $context, ?array $backtrace = null)
     {
         $level = error_reporting() | E_RECOVERABLE_ERROR | E_USER_ERROR | E_DEPRECATED | E_USER_DEPRECATED;
         $log = $this->loggedErrors & $type;
@@ -538,7 +538,7 @@ class ErrorHandler
      *
      * @internal
      */
-    public function handleException($exception, array $error = null)
+    public function handleException($exception, ?array $error = null)
     {
         if (!$exception instanceof \Exception) {
             $exception = new FatalThrowableError($exception);
@@ -609,7 +609,7 @@ class ErrorHandler
      *
      * @internal
      */
-    public static function handleFatalError(array $error = null)
+    public static function handleFatalError(?array $error = null)
     {
         if (null === self::$reservedMemory) {
             return;

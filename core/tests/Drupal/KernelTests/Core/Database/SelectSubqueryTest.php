@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Database;
 
@@ -12,7 +12,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
   /**
    * Tests that we can use a subquery in a FROM clause.
    */
-  function testFromSubquerySelect() {
+  public function testFromSubquerySelect() {
     // Create a subquery, which is just a normal query object.
     $subquery = db_select('test_task', 'tt');
     $subquery->addField('tt', 'pid', 'pid');
@@ -46,7 +46,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
   /**
    * Tests that we can use a subquery in a FROM clause with a LIMIT.
    */
-  function testFromSubquerySelectWithLimit() {
+  public function testFromSubquerySelectWithLimit() {
     // Create a subquery, which is just a normal query object.
     $subquery = db_select('test_task', 'tt');
     $subquery->addField('tt', 'pid', 'pid');
@@ -72,7 +72,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
   /**
    * Tests that we can use a subquery in a WHERE clause.
    */
-  function testConditionSubquerySelect() {
+  public function testConditionSubquerySelect() {
     // Create a subquery, which is just a normal query object.
     $subquery = db_select('test_task', 'tt');
     $subquery->addField('tt', 'pid', 'pid');
@@ -95,7 +95,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
   /**
    * Tests that we can use a subquery in a JOIN clause.
    */
-  function testJoinSubquerySelect() {
+  public function testJoinSubquerySelect() {
     // Create a subquery, which is just a normal query object.
     $subquery = db_select('test_task', 'tt');
     $subquery->addField('tt', 'pid', 'pid');
@@ -122,7 +122,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
    * We essentially select all rows from the {test} table that have matching
    * rows in the {test_people} table based on the shared name column.
    */
-  function testExistsSubquerySelect() {
+  public function testExistsSubquerySelect() {
     // Put George into {test_people}.
     db_insert('test_people')
       ->fields(array(
@@ -152,7 +152,7 @@ class SelectSubqueryTest extends DatabaseTestBase {
    * We essentially select all rows from the {test} table that don't have
    * matching rows in the {test_people} table based on the shared name column.
    */
-  function testNotExistsSubquerySelect() {
+  public function testNotExistsSubquerySelect() {
     // Put George into {test_people}.
     db_insert('test_people')
       ->fields(array(

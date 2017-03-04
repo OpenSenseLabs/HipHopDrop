@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\language\Tests;
 
@@ -57,7 +57,7 @@ class LanguagePathMonolingualTest extends WebTestBase {
   /**
    * Verifies that links do not have language prefixes in them.
    */
-  function testPageLinks() {
+  public function testPageLinks() {
     // Navigate to 'admin/config' path.
     $this->drupalGet('admin/config');
 

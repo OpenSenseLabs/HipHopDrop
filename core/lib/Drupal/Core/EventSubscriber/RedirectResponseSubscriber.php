@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -165,7 +165,7 @@ class RedirectResponseSubscriber implements EventSubscriberInterface {
    * @return array
    *   An array of event listener definitions.
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::RESPONSE][] = array('checkRedirectUrl');
     $events[KernelEvents::REQUEST][] = array('sanitizeDestination', 100);
     return $events;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\contact\Tests;
 
@@ -21,7 +21,7 @@ class ContactAuthenticatedUserTest extends WebTestBase {
   /**
    * Tests that name and email fields are not present for authenticated users.
    */
-  function testContactSiteWideTextfieldsLoggedInTestCase() {
+  public function testContactSiteWideTextfieldsLoggedInTestCase() {
     $this->drupalLogin($this->drupalCreateUser(array('access site-wide contact form')));
     $this->drupalGet('contact');
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ckeditor\Plugin\CKEditorPlugin;
 
@@ -77,7 +77,7 @@ class DrupalImageCaption extends PluginBase implements CKEditorPluginInterface, 
   /**
    * {@inheritdoc}
    */
-  function isEnabled(Editor $editor) {
+  public function isEnabled(Editor $editor) {
     if (!$editor->hasAssociatedFilterFormat()) {
       return FALSE;
     }

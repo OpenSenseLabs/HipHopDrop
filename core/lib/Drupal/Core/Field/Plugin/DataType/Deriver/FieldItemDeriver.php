@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Field\Plugin\DataType\Deriver;
 

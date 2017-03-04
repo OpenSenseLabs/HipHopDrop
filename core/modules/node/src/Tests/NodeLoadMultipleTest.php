@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -27,7 +27,7 @@ class NodeLoadMultipleTest extends NodeTestBase {
   /**
    * Creates four nodes and ensures that they are loaded correctly.
    */
-  function testNodeMultipleLoad() {
+  public function testNodeMultipleLoad() {
     $node1 = $this->drupalCreateNode(array('type' => 'article', 'promote' => 1));
     $node2 = $this->drupalCreateNode(array('type' => 'article', 'promote' => 1));
     $node3 = $this->drupalCreateNode(array('type' => 'article', 'promote' => 0));

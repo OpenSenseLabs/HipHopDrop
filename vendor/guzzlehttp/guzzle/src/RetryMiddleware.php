@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace GuzzleHttp;
 
 use GuzzleHttp\Promise\PromiseInterface;
@@ -31,7 +31,7 @@ class RetryMiddleware
     public function __construct(
         callable $decider,
         callable $nextHandler,
-        callable $delay = null
+        ?callable $delay = null
     ) {
         $this->decider = $decider;
         $this->nextHandler = $nextHandler;

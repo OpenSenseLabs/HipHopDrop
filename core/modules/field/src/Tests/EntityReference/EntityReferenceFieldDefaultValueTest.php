@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\field\Tests\EntityReference;
 
@@ -47,7 +47,7 @@ class EntityReferenceFieldDefaultValueTest extends WebTestBase {
   /**
    * Tests that default values are correctly translated to UUIDs in config.
    */
-  function testEntityReferenceDefaultValue() {
+  public function testEntityReferenceDefaultValue() {
     // Create a node to be referenced.
     $referenced_node = $this->drupalCreateNode(array('type' => 'referenced_content'));
 
@@ -109,7 +109,7 @@ class EntityReferenceFieldDefaultValueTest extends WebTestBase {
    *
    * @see \Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem::onDependencyRemoval()
    */
-  function testEntityReferenceDefaultConfigValue() {
+  public function testEntityReferenceDefaultConfigValue() {
     // Create a node to be referenced.
     $referenced_node_type = $this->drupalCreateContentType(array('type' => 'referenced_config_to_delete'));
     $referenced_node_type2 = $this->drupalCreateContentType(array('type' => 'referenced_config_to_preserve'));

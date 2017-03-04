@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\aggregator_test\Plugin\aggregator\parser;
 

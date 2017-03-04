@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\datetime\Plugin\Field\FieldWidget;
 
@@ -85,7 +85,7 @@ class DateTimeDatelistWidget extends DateTimeWidgetBase {
   /**
    * {@inheritdoc}
    */
-  function settingsForm(array $form, FormStateInterface $form_state) {
+  public function settingsForm(array $form, FormStateInterface $form_state) {
     $element = parent::settingsForm($form, $form_state);
 
     $element['date_order'] = array(

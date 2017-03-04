@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Form;
 
@@ -20,7 +20,7 @@ class ConfirmFormTest extends WebTestBase {
    */
   public static $modules = array('form_test');
 
-  function testConfirmForm() {
+  public function testConfirmForm() {
     // Test the building of the form.
     $this->drupalGet('form-test/confirm-form');
     $site_name = $this->config('system.site')->get('name');

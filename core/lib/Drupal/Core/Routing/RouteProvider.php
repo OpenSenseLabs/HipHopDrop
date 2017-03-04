@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Routing;
 
@@ -388,7 +388,7 @@ class RouteProvider implements PreloadableRouteProviderInterface, PagedRouteProv
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[RoutingEvents::FINISHED][] = array('reset');
     return $events;
   }

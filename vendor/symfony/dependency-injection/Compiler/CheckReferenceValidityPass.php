@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -118,7 +118,7 @@ class CheckReferenceValidityPass implements CompilerPassInterface
      * @throws ScopeWideningInjectionException when the definition references a service of a narrower scope
      * @throws ScopeCrossingInjectionException when the definition references a service of another scope hierarchy
      */
-    private function validateScope(Reference $reference, Definition $definition = null)
+    private function validateScope(Reference $reference, ?Definition $definition = null)
     {
         if (ContainerInterface::SCOPE_PROTOTYPE === $this->currentScope) {
             return;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -30,7 +30,7 @@ class JsonEncoder implements EncoderInterface, DecoderInterface
      */
     protected $decodingImpl;
 
-    public function __construct(JsonEncode $encodingImpl = null, JsonDecode $decodingImpl = null)
+    public function __construct(?JsonEncode $encodingImpl = null, ?JsonDecode $decodingImpl = null)
     {
         $this->encodingImpl = $encodingImpl ?: new JsonEncode();
         $this->decodingImpl = $decodingImpl ?: new JsonDecode(true);

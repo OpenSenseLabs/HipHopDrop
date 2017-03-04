@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\Test;
 
@@ -19,7 +19,7 @@ class TestKernel extends DrupalKernel {
     // Exit if we should be in a test environment but aren't.
     if (!drupal_valid_test_ua()) {
       header($_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden');
-      exit;
+      exit(0);
     }
 
     parent::__construct($environment, $class_loader, $allow_dumping);

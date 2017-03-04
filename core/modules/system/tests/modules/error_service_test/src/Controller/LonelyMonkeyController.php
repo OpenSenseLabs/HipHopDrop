@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\error_service_test\Controller;
 

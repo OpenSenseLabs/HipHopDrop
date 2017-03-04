@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Composer\Installers;
 
 class MicroweberInstaller extends BaseInstaller
@@ -43,7 +43,7 @@ class MicroweberInstaller extends BaseInstaller
         if ($vars['type'] === 'microweber-skin') {
             return $this->inflectSkinVars($vars);
         }
-        if ($vars['type'] === 'microweber-element' or $vars['type'] === 'microweber-elements') {
+        if ($vars['type'] === 'microweber-element' || $vars['type'] === 'microweber-elements') {
             return $this->inflectElementVars($vars);
         }
 

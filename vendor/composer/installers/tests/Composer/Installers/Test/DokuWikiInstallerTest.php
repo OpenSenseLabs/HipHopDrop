@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Composer\Installers\Test;
 
 use Composer\Installers\DokuWikiInstaller;

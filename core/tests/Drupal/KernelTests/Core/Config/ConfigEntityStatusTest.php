@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Config;
 
@@ -21,7 +21,7 @@ class ConfigEntityStatusTest extends KernelTestBase {
   /**
    * Tests the enabling/disabling of entities.
    */
-  function testCRUD() {
+  public function testCRUD() {
     $entity = entity_create('config_test', array(
       'id' => strtolower($this->randomMachineName()),
     ));

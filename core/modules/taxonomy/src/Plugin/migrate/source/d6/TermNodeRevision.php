@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Plugin\migrate\source\d6;
 

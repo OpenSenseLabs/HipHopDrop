@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests\Views;
 
@@ -45,7 +45,7 @@ class TaxonomyFieldFilterTest extends ViewTestBase {
    */
   public $termNames = [];
 
-  function setUp() {
+  public function setUp() {
     parent::setUp();
 
     // Add two new languages.

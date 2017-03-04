@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\system\Tests\FileTransfer;
 
@@ -23,7 +23,7 @@ class FileTransferTest extends WebTestBase {
     $this->testConnection = TestFileTransfer::factory(\Drupal::root(), array('hostname' => $this->hostname, 'username' => $this->username, 'password' => $this->password, 'port' => $this->port));
   }
 
-  function _getFakeModuleFiles() {
+  public function _getFakeModuleFiles() {
     $files = array(
       'fake.module',
       'fake.info.yml',
@@ -37,7 +37,7 @@ class FileTransferTest extends WebTestBase {
     return $files;
   }
 
-  function _buildFakeModule() {
+  public function _buildFakeModule() {
     $location = 'temporary://fake';
     if (is_dir($location)) {
       $ret = 0;
@@ -53,7 +53,7 @@ class FileTransferTest extends WebTestBase {
     return $location;
   }
 
-  function _writeDirectory($base, $files = array()) {
+  public function _writeDirectory($base, $files = array()) {
     mkdir($base);
     foreach ($files as $key => $file) {
       if (is_array($file)) {
@@ -66,7 +66,7 @@ class FileTransferTest extends WebTestBase {
     }
   }
 
-  function testJail() {
+  public function testJail() {
     $source = $this->_buildFakeModule();
 
     // This convoluted piece of code is here because our testing framework does

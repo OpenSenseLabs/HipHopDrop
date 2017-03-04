@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace Composer\Installers\Test;
 
 use Composer\Installers\CakePHPInstaller;

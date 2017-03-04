@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\views\Plugin\views\filter;
 
@@ -35,7 +35,7 @@ class StringFilter extends FilterPluginBase {
    * to add or remove functionality by overriding this function and
    * adding/removing items from this array.
    */
-  function operators() {
+  public function operators() {
     $operators = array(
       '=' => array(
         'title' => $this->t('Is equal to'),
@@ -235,7 +235,7 @@ class StringFilter extends FilterPluginBase {
     }
   }
 
-  function operator() {
+  public function operator() {
     return $this->operator == '=' ? 'LIKE' : 'NOT LIKE';
   }
 
@@ -276,7 +276,7 @@ class StringFilter extends FilterPluginBase {
     foreach ($matches as $match) {
       $phrase = FALSE;
       // Strip off phrase quotes
-      if ($match[2]{0} == '"') {
+      if ($match[2][0] == '"') {
         $match[2] = substr($match[2], 1, -1);
         $phrase = TRUE;
       }

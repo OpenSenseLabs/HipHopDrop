@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Config\Entity\Query;
 
@@ -249,7 +249,7 @@ class QueryFactory implements QueryFactoryInterface, EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::SAVE][] = array('onConfigSave', 128);
     $events[ConfigEvents::DELETE][] = array('onConfigDelete', 128);
     return $events;

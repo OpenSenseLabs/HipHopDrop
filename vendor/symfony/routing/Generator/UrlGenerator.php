@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -82,7 +82,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
      * @param RequestContext       $context The context
      * @param LoggerInterface|null $logger  A logger instance
      */
-    public function __construct(RouteCollection $routes, RequestContext $context, LoggerInterface $logger = null)
+    public function __construct(RouteCollection $routes, RequestContext $context, ?LoggerInterface $logger = null)
     {
         $this->routes = $routes;
         $this->context = $context;

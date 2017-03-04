@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -51,11 +51,11 @@ abstract class ServerRequestFactory
      * @throws InvalidArgumentException for invalid file values
      */
     public static function fromGlobals(
-        array $server = null,
-        array $query = null,
-        array $body = null,
-        array $cookies = null,
-        array $files = null
+        ?array $server = null,
+        ?array $query = null,
+        ?array $body = null,
+        ?array $cookies = null,
+        ?array $files = null
     ) {
         $server  = static::normalizeServer($server ?: $_SERVER);
         $files   = static::normalizeFiles($files ?: $_FILES);

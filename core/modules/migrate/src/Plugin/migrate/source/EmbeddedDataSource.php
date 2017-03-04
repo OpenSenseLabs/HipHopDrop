@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\migrate\Plugin\migrate\source;
 use Drupal\migrate\Plugin\MigrationInterface;

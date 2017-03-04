@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -56,7 +56,7 @@ class EasyRdf_TypeMapper
      */
     public static function get($type)
     {
-        if (!is_string($type) or $type == null or $type == '') {
+        if (!is_string($type) || $type == null || $type == '') {
             throw new InvalidArgumentException(
                 "\$type should be a string and cannot be null or empty"
             );
@@ -78,13 +78,13 @@ class EasyRdf_TypeMapper
      */
     public static function set($type, $class)
     {
-        if (!is_string($type) or $type == null or $type == '') {
+        if (!is_string($type) || $type == null || $type == '') {
             throw new InvalidArgumentException(
                 "\$type should be a string and cannot be null or empty"
             );
         }
 
-        if (!is_string($class) or $class == null or $class == '') {
+        if (!is_string($class) || $class == null || $class == '') {
             throw new InvalidArgumentException(
                 "\$class should be a string and cannot be null or empty"
             );
@@ -101,7 +101,7 @@ class EasyRdf_TypeMapper
       */
     public static function delete($type)
     {
-        if (!is_string($type) or $type == null or $type == '') {
+        if (!is_string($type) || $type == null || $type == '') {
             throw new InvalidArgumentException(
                 "\$type should be a string and cannot be null or empty"
             );

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\rdf\Unit;
 
@@ -102,7 +102,7 @@ class RdfMappingConfigEntityUnitTest extends UnitTestCase {
                      ->method('getProvider')
                      ->will($this->returnValue('test_module'));
     $bundle_id = $this->randomMachineName(10);
-    $values = array('targetEntityType' => $target_entity_type_id , 'bundle' => $bundle_id);
+    $values = array('targetEntityType' => $target_entity_type_id, 'bundle' => $bundle_id);
 
     $target_entity_type->expects($this->any())
       ->method('getBundleConfigDependency')

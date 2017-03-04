@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -63,7 +63,7 @@ class EasyRdf_Literal_Decimal extends EasyRdf_Literal
     {
         if (is_string($value)) {
             self::validate($value);
-        } elseif (is_double($value) or is_int($value)) {
+        } elseif (is_double($value) || is_int($value)) {
             $locale_data = localeconv();
             $value = str_replace($locale_data['decimal_point'], '.', strval($value));
         } else {

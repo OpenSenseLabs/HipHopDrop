@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Egulias\EmailValidator\Parser;
 
@@ -20,7 +20,7 @@ abstract class Parser
         return $this->warnings;
     }
 
-    abstract function parse($str);
+    public abstract function parse($str);
 
     /**
      * validateQuotedPair

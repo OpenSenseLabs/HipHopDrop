@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\field_test\Plugin\Field\FieldType;
 

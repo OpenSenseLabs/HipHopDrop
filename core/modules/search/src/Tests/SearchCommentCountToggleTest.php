@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Tests;
 
@@ -79,7 +79,7 @@ class SearchCommentCountToggleTest extends SearchTestBase {
   /**
    * Verify that comment count display toggles properly on comment status of node
    */
-  function testSearchCommentCountToggle() {
+  public function testSearchCommentCountToggle() {
     // Search for the nodes by string in the node body.
     $edit = array(
       'keys' => "'SearchCommentToggleTestCase'",

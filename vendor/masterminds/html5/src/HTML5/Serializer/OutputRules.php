@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * @file
  * The rules for generating output in the serializer.

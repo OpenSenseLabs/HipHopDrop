@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Tests;
 
@@ -86,7 +86,7 @@ class SearchLanguageTest extends SearchTestBase {
     search_update_totals();
   }
 
-  function testLanguages() {
+  public function testLanguages() {
     // Add predefined language.
     $edit = array('predefined_langcode' => 'fr');
     $this->drupalPostForm('admin/config/regional/language/add', $edit, t('Add language'));

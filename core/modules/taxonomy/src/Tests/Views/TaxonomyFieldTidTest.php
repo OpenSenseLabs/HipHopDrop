@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests\Views;
 
@@ -19,7 +19,7 @@ class TaxonomyFieldTidTest extends TaxonomyTestBase {
    */
   public static $testViews = array('test_taxonomy_tid_field');
 
-  function testViewsHandlerTidField() {
+  public function testViewsHandlerTidField() {
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
     $renderer = \Drupal::service('renderer');
 

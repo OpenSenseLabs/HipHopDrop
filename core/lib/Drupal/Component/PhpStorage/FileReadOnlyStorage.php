@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Component\PhpStorage;
 
@@ -68,7 +68,7 @@ class FileReadOnlyStorage implements PhpStorageInterface {
   /**
    * {@inheritdoc}
    */
-  function writeable() {
+  public function writeable() {
     return FALSE;
   }
 

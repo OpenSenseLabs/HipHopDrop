@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file is part of the Composer Merge plugin.
  *

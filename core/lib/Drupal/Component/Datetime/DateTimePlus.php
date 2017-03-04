@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Component\Datetime;
 use Drupal\Component\Utility\ToStringTrait;

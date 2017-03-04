@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 static $data = array (
   'µ' => 'μ',

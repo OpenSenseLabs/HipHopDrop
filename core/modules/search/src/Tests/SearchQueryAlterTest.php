@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Tests;
 
@@ -18,7 +18,7 @@ class SearchQueryAlterTest extends SearchTestBase {
   /**
    * Tests that the query alter works.
    */
-  function testQueryAlter() {
+  public function testQueryAlter() {
     // Log in with sufficient privileges.
     $this->drupalLogin($this->drupalCreateUser(array('create page content', 'search content')));
 

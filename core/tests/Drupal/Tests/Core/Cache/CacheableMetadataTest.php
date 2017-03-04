@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Core\Cache;
 
@@ -122,7 +122,7 @@ class CacheableMetadataTest extends UnitTestCase {
    */
   public function providerSetCacheMaxAge() {
     return [
-      [0 , FALSE],
+      [0, FALSE],
       ['http', TRUE],
       ['0', TRUE],
       [new \stdClass(), TRUE],

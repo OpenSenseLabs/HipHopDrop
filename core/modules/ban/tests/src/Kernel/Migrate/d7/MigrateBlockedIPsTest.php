@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\ban\Kernel\Migrate\d7;
 

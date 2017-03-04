@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Theme;
 
@@ -53,7 +53,7 @@ class ThemeInfoTest extends WebTestBase {
   /**
    * Tests stylesheets-remove.
    */
-  function testStylesheets() {
+  public function testStylesheets() {
     $this->themeHandler->install(array('test_basetheme', 'test_subtheme'));
     $this->config('system.theme')
       ->set('default', 'test_subtheme')

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ajax_forms_test\Form;
 

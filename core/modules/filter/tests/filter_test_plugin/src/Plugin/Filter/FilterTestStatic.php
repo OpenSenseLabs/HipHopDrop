@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\filter_test_plugin\Plugin\Filter;
 

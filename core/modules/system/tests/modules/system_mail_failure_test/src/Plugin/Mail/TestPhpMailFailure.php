@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system_mail_failure_test\Plugin\Mail;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
@@ -73,7 +73,7 @@ final class Enum
             if( ! in_array($key, $values['value'])) {
                 throw new \InvalidArgumentException(sprintf(
                     'Undefined enumerator value "%s" for literal "%s".',
-                    $key , $var
+                    $key, $var
                 ));
             }
         }

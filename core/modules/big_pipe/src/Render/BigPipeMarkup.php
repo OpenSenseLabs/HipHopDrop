@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\big_pipe\Render;
 

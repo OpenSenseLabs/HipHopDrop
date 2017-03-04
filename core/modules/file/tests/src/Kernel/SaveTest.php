@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\file\Kernel;
 
@@ -10,7 +10,7 @@ use Drupal\file\Entity\File;
  * @group file
  */
 class SaveTest extends FileManagedUnitTestBase {
-  function testFileSave() {
+  public function testFileSave() {
     // Create a new file entity.
     $file = File::create(array(
       'uid' => 1,

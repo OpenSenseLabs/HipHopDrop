@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\rest;
 
@@ -123,7 +123,7 @@ class RequestHandler implements ContainerAwareInterface, ContainerInjectionInter
     $parameters = array();
     // Filter out all internal parameters starting with "_".
     foreach ($route_parameters as $key => $parameter) {
-      if ($key{0} !== '_') {
+      if ($key[0] !== '_') {
         $parameters[] = $parameter;
       }
     }

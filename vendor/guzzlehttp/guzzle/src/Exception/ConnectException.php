@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp\Exception;
 
 use Psr\Http\Message\RequestInterface;
@@ -13,7 +13,7 @@ class ConnectException extends RequestException
     public function __construct(
         $message,
         RequestInterface $request,
-        \Exception $previous = null,
+        ?\Exception $previous = null,
         array $handlerContext = []
     ) {
         parent::__construct($message, $request, null, $previous, $handlerContext);

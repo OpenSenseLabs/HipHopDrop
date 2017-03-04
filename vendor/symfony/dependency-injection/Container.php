@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -80,7 +80,7 @@ class Container implements IntrospectableContainerInterface, ResettableContainer
     /**
      * @param ParameterBagInterface $parameterBag A ParameterBagInterface instance
      */
-    public function __construct(ParameterBagInterface $parameterBag = null)
+    public function __construct(?ParameterBagInterface $parameterBag = null)
     {
         $this->parameterBag = $parameterBag ?: new ParameterBag();
     }

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -179,7 +179,7 @@ class EasyRdf_Serialiser_Turtle extends EasyRdf_Serialiser
 
             $value = $node->get('rdf:first');
             $node = $node->get('rdf:rest');
-            if ($node and $node->hasProperty('rdf:first')) {
+            if ($node && $node->hasProperty('rdf:first')) {
                 $count++;
             }
 
@@ -236,10 +236,10 @@ class EasyRdf_Serialiser_Turtle extends EasyRdf_Serialiser
 
                 if ($object instanceof EasyRdf_Collection) {
                     $turtle .= ' ' . $this->serialiseCollection($object, $indent);
-                } elseif ($object instanceof EasyRdf_Resource and $object->isBNode()) {
+                } elseif ($object instanceof EasyRdf_Resource && $object->isBNode()) {
                     $id = $object->getBNodeId();
                     $rpcount = $this->reversePropertyCount($object);
-                    if ($rpcount <= 1 and !isset($this->outputtedBnodes[$id])) {
+                    if ($rpcount <= 1 && !isset($this->outputtedBnodes[$id])) {
                         // Nested unlabelled Blank Node
                         $this->outputtedBnodes[$id] = true;
                         $turtle .= ' [';
@@ -341,7 +341,7 @@ class EasyRdf_Serialiser_Turtle extends EasyRdf_Serialiser
     {
         parent::checkSerialiseParams($graph, $format);
 
-        if ($format != 'turtle' and $format != 'n3') {
+        if ($format != 'turtle' && $format != 'n3') {
             throw new EasyRdf_Exception(
                 "EasyRdf_Serialiser_Turtle does not support: $format"
             );

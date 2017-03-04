@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\user\Tests;
 
@@ -14,7 +14,7 @@ class UserEditTest extends WebTestBase {
   /**
    * Test user edit page.
    */
-  function testUserEdit() {
+  public function testUserEdit() {
     // Test user edit functionality.
     $user1 = $this->drupalCreateUser(array('change own username'));
     $user2 = $this->drupalCreateUser(array());
@@ -124,7 +124,7 @@ class UserEditTest extends WebTestBase {
   /**
    * Tests editing of a user account without an email address.
    */
-  function testUserWithoutEmailEdit() {
+  public function testUserWithoutEmailEdit() {
     // Test that an admin can edit users without an email address.
     $admin = $this->drupalCreateUser(array('administer users'));
     $this->drupalLogin($admin);

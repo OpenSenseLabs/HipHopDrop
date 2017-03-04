@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\statistics\Tests;
 
@@ -12,7 +12,7 @@ class StatisticsTokenReplaceTest extends StatisticsTestBase {
   /**
    * Creates a node, then tests the statistics tokens generated from it.
    */
-  function testStatisticsTokenReplacement() {
+  public function testStatisticsTokenReplacement() {
     $language_interface = \Drupal::languageManager()->getCurrentLanguage();
 
     // Create user and node.

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\datetime\Plugin\views\sort;
 

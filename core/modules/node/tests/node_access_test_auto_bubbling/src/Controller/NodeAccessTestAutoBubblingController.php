@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\node_access_test_auto_bubbling\Controller;
 

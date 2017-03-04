@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Tests\Plugin;
 
@@ -37,7 +37,7 @@ class NumericFormatPluralTest extends ViewTestBase {
   /**
    * Test plural formatting setting on a numeric views handler.
    */
-  function testNumericFormatPlural() {
+  public function testNumericFormatPlural() {
     // Create a file.
     $file = $this->createFile();
 

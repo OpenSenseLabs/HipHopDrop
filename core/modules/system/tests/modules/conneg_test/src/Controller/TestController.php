@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\conneg_test\Controller;
 

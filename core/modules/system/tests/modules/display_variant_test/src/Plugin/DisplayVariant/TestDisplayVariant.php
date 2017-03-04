@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\display_variant_test\Plugin\DisplayVariant;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Mail;
 
@@ -343,7 +343,7 @@ class MailFormatHelper {
         static::$regexp = '@^' . preg_quote($base_path, '@') . '@';
       }
       if ($match) {
-        list(, , $url, $label) = $match;
+        list(,, $url, $label) = $match;
         // Ensure all URLs are absolute.
         static::$urls[] = strpos($url, '://') ? $url : preg_replace(static::$regexp, $base_url . '/', $url);
         return $label . ' [' . count(static::$urls) . ']';

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\big_pipe_regression_test;
 

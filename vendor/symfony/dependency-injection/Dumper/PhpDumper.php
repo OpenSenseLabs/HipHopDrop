@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -1505,7 +1505,7 @@ EOF;
      *
      * @return string
      */
-    private function getServiceCall($id, Reference $reference = null)
+    private function getServiceCall($id, ?Reference $reference = null)
     {
         if ('service_container' === $id) {
             return '$this';

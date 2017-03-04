@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony CMF package.
@@ -24,7 +24,7 @@ class RouterMatchEvent extends Event
     /**
      * @param Request $request
      */
-    public function __construct(Request $request = null)
+    public function __construct(?Request $request = null)
     {
         $this->request = $request;
     }

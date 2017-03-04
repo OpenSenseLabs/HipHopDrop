@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -52,7 +52,7 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     /**
      * {@inheritdoc}
      */
-    public function collect(Request $request, Response $response, \Exception $exception = null)
+    public function collect(Request $request, Response $response, ?\Exception $exception = null)
     {
         // everything is done as late as possible
     }

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -635,7 +635,7 @@ class Rss extends AbstractFeed
         }
 
         if ($list->length) {
-            $categoryCollection = new Collection\Category;
+            $categoryCollection = new Collection\Category();
             foreach ($list as $category) {
                 $categoryCollection[] = [
                     'term' => $category->nodeValue,

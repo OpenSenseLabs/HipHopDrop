@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\Path;
 use Symfony\Component\HttpFoundation\RequestStack;

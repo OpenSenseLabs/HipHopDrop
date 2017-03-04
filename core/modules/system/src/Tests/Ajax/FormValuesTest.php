@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Ajax;
 
@@ -19,7 +19,7 @@ class FormValuesTest extends AjaxTestBase {
   /**
    * Submits forms with select and checkbox elements via Ajax.
    */
-  function testSimpleAjaxFormValue() {
+  public function testSimpleAjaxFormValue() {
     // Verify form values of a select element.
     foreach (array('red', 'green', 'blue') as $item) {
       $edit = array(

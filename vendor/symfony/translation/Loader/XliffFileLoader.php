@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -295,7 +295,7 @@ class XliffFileLoader implements LoaderInterface
      *
      * @return array
      */
-    private function parseNotesMetadata(\SimpleXMLElement $noteElement = null, $encoding = null)
+    private function parseNotesMetadata(?\SimpleXMLElement $noteElement = null, $encoding = null)
     {
         $notes = array();
 

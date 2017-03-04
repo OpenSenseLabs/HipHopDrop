@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\tracker\Kernel\Plugin\migrate\source\d7;
 

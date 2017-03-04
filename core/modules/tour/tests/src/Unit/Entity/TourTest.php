@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\tour\Unit\Entity;
 

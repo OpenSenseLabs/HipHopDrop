@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\views\Kernel\Handler;
 
@@ -19,7 +19,7 @@ class ArgumentNullTest extends ViewsKernelTestBase {
    */
   public static $testViews = array('test_view');
 
-  function viewsData() {
+  public function viewsData() {
     $data = parent::viewsData();
     $data['views_test_data']['id']['argument']['id'] = 'null';
 

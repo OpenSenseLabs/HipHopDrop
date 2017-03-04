@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\config\Tests;
 
@@ -34,7 +34,7 @@ class ConfigEntityListMultilingualTest extends WebTestBase {
   /**
    * Tests the listing UI with different language scenarios.
    */
-  function testListUI() {
+  public function testListUI() {
     // Log in as an administrative user to access the full menu trail.
     $this->drupalLogin($this->drupalCreateUser(array('access administration pages', 'administer site configuration')));
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -303,7 +303,7 @@ class Reader implements ReaderImportInterface
 
         $libxmlErrflag = libxml_use_internal_errors(true);
         $oldValue = libxml_disable_entity_loader(true);
-        $dom = new DOMDocument;
+        $dom = new DOMDocument();
         $status = $dom->loadXML(trim($string));
         foreach ($dom->childNodes as $child) {
             if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
@@ -380,7 +380,7 @@ class Reader implements ReaderImportInterface
         $responseHtml = $response->getBody();
         $libxmlErrflag = libxml_use_internal_errors(true);
         $oldValue = libxml_disable_entity_loader(true);
-        $dom = new DOMDocument;
+        $dom = new DOMDocument();
         $status = $dom->loadHTML(trim($responseHtml));
         libxml_disable_entity_loader($oldValue);
         libxml_use_internal_errors($libxmlErrflag);
@@ -395,7 +395,7 @@ class Reader implements ReaderImportInterface
             }
             throw new Exception\RuntimeException($errormsg);
         }
-        $feedSet = new FeedSet;
+        $feedSet = new FeedSet();
         $links = $dom->getElementsByTagName('link');
         $feedSet->addLinks($links, $uri);
         return $feedSet;
@@ -420,7 +420,7 @@ class Reader implements ReaderImportInterface
             ErrorHandler::start(E_NOTICE|E_WARNING);
             ini_set('track_errors', 1);
             $oldValue = libxml_disable_entity_loader(true);
-            $dom = new DOMDocument;
+            $dom = new DOMDocument();
             $status = $dom->loadXML($feed);
             foreach ($dom->childNodes as $child) {
                 if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {

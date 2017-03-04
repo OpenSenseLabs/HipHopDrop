@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Theme;
 
@@ -121,7 +121,7 @@ class EntityFilteringThemeTest extends WebTestBase {
   /**
    * Checks each themed entity for XSS filtering in available themes.
    */
-  function testThemedEntity() {
+  public function testThemedEntity() {
     // Check paths where various view modes of the entities are rendered.
     $paths = array(
       'user',

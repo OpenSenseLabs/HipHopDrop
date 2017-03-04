@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Component\Utility;
 
@@ -43,14 +43,14 @@ class BytesTest extends UnitTestCase {
     return array(
       array('1', 1),
       array('1 byte', 1),
-      array('1 KB'  , Bytes::KILOBYTE),
-      array('1 MB'  , pow(Bytes::KILOBYTE, 2)),
-      array('1 GB'  , pow(Bytes::KILOBYTE, 3)),
-      array('1 TB'  , pow(Bytes::KILOBYTE, 4)),
-      array('1 PB'  , pow(Bytes::KILOBYTE, 5)),
-      array('1 EB'  , pow(Bytes::KILOBYTE, 6)),
-      array('1 ZB'  , pow(Bytes::KILOBYTE, 7)),
-      array('1 YB'  , pow(Bytes::KILOBYTE, 8)),
+      array('1 KB', Bytes::KILOBYTE),
+      array('1 MB', pow(Bytes::KILOBYTE, 2)),
+      array('1 GB', pow(Bytes::KILOBYTE, 3)),
+      array('1 TB', pow(Bytes::KILOBYTE, 4)),
+      array('1 PB', pow(Bytes::KILOBYTE, 5)),
+      array('1 EB', pow(Bytes::KILOBYTE, 6)),
+      array('1 ZB', pow(Bytes::KILOBYTE, 7)),
+      array('1 YB', pow(Bytes::KILOBYTE, 8)),
       array('23476892 bytes', 23476892),
       array('76MRandomStringThatShouldBeIgnoredByParseSize.', 79691776), // 76 MB
       array('76.24 Giggabyte', 81862076662), // 76.24 GB (with typo)

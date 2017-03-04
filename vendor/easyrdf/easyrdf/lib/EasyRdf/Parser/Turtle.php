@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -325,7 +325,7 @@ class EasyRdf_Parser_Turtle extends EasyRdf_Parser_Ntriples
         } else {
             $value = $this->parseValue();
 
-            if ($value['type'] == 'uri' or $value['type'] == 'bnode') {
+            if ($value['type'] == 'uri' || $value['type'] == 'bnode') {
                 $this->subject = $value;
             } else {
                 throw new EasyRdf_Parser_Exception(

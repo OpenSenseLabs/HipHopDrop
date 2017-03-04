@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\rest_test\Plugin\rest\resource;
 

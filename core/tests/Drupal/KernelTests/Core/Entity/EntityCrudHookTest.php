@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Entity;
 
@@ -535,7 +535,7 @@ class EntityCrudHookTest extends EntityKernelTestBase {
   /**
    * Tests rollback from failed entity save.
    */
-  function testEntityRollback() {
+  public function testEntityRollback() {
     // Create a block.
     try {
       EntityTest::create(array('name' => 'fail_insert'))->save();

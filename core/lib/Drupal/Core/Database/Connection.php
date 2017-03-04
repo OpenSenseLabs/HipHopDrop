@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\Database;
 
@@ -1248,7 +1248,7 @@ abstract class Connection {
    * @return string
    *   The name of the temporary table.
    */
-  abstract function queryTemporary($query, array $args = array(), array $options = array());
+  public abstract function queryTemporary($query, array $args = array(), array $options = array());
 
   /**
    * Returns the type of database driver.

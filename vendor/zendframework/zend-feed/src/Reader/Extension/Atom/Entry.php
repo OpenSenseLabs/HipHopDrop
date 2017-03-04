@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -503,7 +503,7 @@ class Entry extends Extension\AbstractEntry
         }
 
         if ($list->length) {
-            $categoryCollection = new Collection\Category;
+            $categoryCollection = new Collection\Category();
             foreach ($list as $category) {
                 $categoryCollection[] = [
                     'term' => $category->getAttribute('term'),
@@ -512,7 +512,7 @@ class Entry extends Extension\AbstractEntry
                 ];
             }
         } else {
-            return new Collection\Category;
+            return new Collection\Category();
         }
 
         $this->data['categories'] = $categoryCollection;

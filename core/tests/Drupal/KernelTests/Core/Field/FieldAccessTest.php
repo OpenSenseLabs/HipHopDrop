@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Field;
 
@@ -48,7 +48,7 @@ class FieldAccessTest extends KernelTestBase {
    * @see entity_test_entity_field_access()
    * @see entity_test_entity_field_access_alter()
    */
-  function testFieldAccess() {
+  public function testFieldAccess() {
     $values = array(
       'name' => $this->randomMachineName(),
       'user_id' => 1,

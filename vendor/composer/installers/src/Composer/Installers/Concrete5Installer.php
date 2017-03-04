@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Composer\Installers;
 
 class Concrete5Installer extends BaseInstaller

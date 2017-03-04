@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -41,5 +41,5 @@ interface PropertyChangedListener
      *
      * @return void
      */
-    function propertyChanged($sender, $propertyName, $oldValue, $newValue);
+    public function propertyChanged($sender, $propertyName, $oldValue, $newValue);
 }

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -23,7 +23,7 @@ use Symfony\Component\ExpressionLanguage\ParserCache\ParserCacheInterface;
  */
 class ExpressionLanguage extends BaseExpressionLanguage
 {
-    public function __construct(ParserCacheInterface $cache = null, array $providers = array())
+    public function __construct(?ParserCacheInterface $cache = null, array $providers = array())
     {
         // prepend the default provider to let users override it easily
         array_unshift($providers, new ExpressionLanguageProvider());

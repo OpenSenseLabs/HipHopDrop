@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -82,7 +82,7 @@ class EasyRdf_Serialiser_JsonLd extends EasyRdf_Serialiser
 
             foreach ($properties as $property => $values) {
                 foreach ($values as $value) {
-                    if ($value['type'] == 'bnode' or $value['type'] == 'uri') {
+                    if ($value['type'] == 'bnode' || $value['type'] == 'uri') {
                         if (array_key_exists($value['value'], $nodes)) {
                             $_value = $nodes[$value['value']];
                         } else {
@@ -113,8 +113,8 @@ class EasyRdf_Serialiser_JsonLd extends EasyRdf_Serialiser
         }
 
         // OPTIONS
-        $use_native_types = !(isset($options['expand_native_types']) and $options['expand_native_types'] == true);
-        $should_compact = (isset($options['compact']) and $options['compact'] == true);
+        $use_native_types = !(isset($options['expand_native_types']) && $options['expand_native_types'] == true);
+        $should_compact = (isset($options['compact']) && $options['compact'] == true);
         $should_frame = isset($options['frame']);
 
         // expanded form

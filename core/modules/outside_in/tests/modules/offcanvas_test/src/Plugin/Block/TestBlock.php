@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\offcanvas_test\Plugin\Block;
 

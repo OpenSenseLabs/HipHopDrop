@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -96,7 +96,7 @@ class EasyRdf_Isomorphic
         if ($groundedStatementsMatch === false) {
             // The grounded statements do not match
             return null;
-        } elseif (count($bnodesA) > 0 or count($bnodesB > 0)) {
+        } elseif (count($bnodesA) > 0 || count($bnodesB > 0)) {
             // There are blank nodes - build a bi-jection
             return self::buildBijectionTo($statementsA, $bnodesA, $statementsB, $bnodesB);
         } else {
@@ -132,22 +132,22 @@ class EasyRdf_Isomorphic
 
             foreach ($properties as $property => $values) {
                 foreach ($values as $value) {
-                    if ($value['type'] == 'uri' and substr($value['value'], 0, 2) == '_:') {
+                    if ($value['type'] == 'uri' && substr($value['value'], 0, 2) == '_:') {
                         array_push($bnodes, $value['value']);
                         $objectIsBnode = true;
                     } else {
                         $objectIsBnode = false;
                     }
 
-                    if ($groundedStatementsMatch and
-                        $subjectIsBnode === false and
-                        $objectIsBnode === false and
+                    if ($groundedStatementsMatch &&
+                        $subjectIsBnode === false &&
+                        $objectIsBnode === false &&
                         $graphB->hasProperty($subject, $property, $value) === false
                     ) {
                         $groundedStatementsMatch = false;
                     }
 
-                    if ($subjectIsBnode or $objectIsBnode) {
+                    if ($subjectIsBnode || $objectIsBnode) {
                         array_push(
                             $anonStatements,
                             array(
@@ -241,7 +241,7 @@ class EasyRdf_Isomorphic
         sort($nodesA);
         sort($bijectionB);
         sort($nodesB);
-        if ($bijectionA != $nodesA or $bijectionB != $nodesB) {
+        if ($bijectionA != $nodesA || $bijectionB != $nodesB) {
             $bijection = null;
 
             foreach ($nodesA as $nodeA) {
@@ -352,7 +352,7 @@ class EasyRdf_Isomorphic
         $statement_signatures = array();
         foreach ($statements as $statement) {
             foreach ($statement as $n) {
-                if ($n['type'] != 'literal' and $n['value'] == $node) {
+                if ($n['type'] != 'literal' && $n['value'] == $node) {
                     array_push(
                         $statement_signatures,
                         self::hashStringFor($statement, $hashes, $node)
@@ -382,8 +382,8 @@ class EasyRdf_Isomorphic
         foreach ($statements as $statement) {
             if (in_array($node, $statement)) {
                 foreach ($statement as $resource) {
-                    if ($node['type'] != 'bnode' or
-                        isset($hashes[$node['value']]) or
+                    if ($node['type'] != 'bnode' ||
+                        isset($hashes[$node['value']]) ||
                         $resource == $node
                     ) {
                         $grounded = false;

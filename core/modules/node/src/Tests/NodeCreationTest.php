@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -33,7 +33,7 @@ class NodeCreationTest extends NodeTestBase {
   /**
    * Creates a "Basic page" node and verifies its consistency in the database.
    */
-  function testNodeCreation() {
+  public function testNodeCreation() {
     $node_type_storage = \Drupal::entityManager()->getStorage('node_type');
 
     // Test /node/add page with only one content type.
@@ -77,7 +77,7 @@ class NodeCreationTest extends NodeTestBase {
   /**
    * Verifies that a transaction rolls back the failed creation.
    */
-  function testFailedPageCreation() {
+  public function testFailedPageCreation() {
     // Create a node.
     $edit = array(
       'uid'      => $this->loggedInUser->id(),
@@ -120,7 +120,7 @@ class NodeCreationTest extends NodeTestBase {
   /**
    * Creates an unpublished node and confirms correct redirect behavior.
    */
-  function testUnpublishedNodeCreation() {
+  public function testUnpublishedNodeCreation() {
     // Set the front page to the test page.
     $this->config('system.site')->set('page.front', '/test-page')->save();
 
@@ -172,7 +172,7 @@ class NodeCreationTest extends NodeTestBase {
   /**
    * Check node/add when no node types exist.
    */
-  function testNodeAddWithoutContentTypes() {
+  public function testNodeAddWithoutContentTypes() {
     $this->drupalGet('node/add');
     $this->assertResponse(200);
     $this->assertNoLinkByHref('/admin/structure/types/add');

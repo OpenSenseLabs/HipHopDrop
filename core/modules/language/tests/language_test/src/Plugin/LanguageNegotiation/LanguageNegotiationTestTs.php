@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\language_test\Plugin\LanguageNegotiation;
 

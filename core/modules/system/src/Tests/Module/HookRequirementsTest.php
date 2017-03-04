@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Module;
 
@@ -11,7 +11,7 @@ class HookRequirementsTest extends ModuleTestBase {
   /**
    * Assert that a module cannot be installed if it fails hook_requirements().
    */
-  function testHookRequirementsFailure() {
+  public function testHookRequirementsFailure() {
     $this->assertModules(array('requirements1_test'), FALSE);
 
     // Attempt to install the requirements1_test module.

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * A handler for processor instructions.
  */

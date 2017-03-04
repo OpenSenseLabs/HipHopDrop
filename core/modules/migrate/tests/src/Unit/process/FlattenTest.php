@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\migrate\Unit\process;
 use Drupal\migrate\Plugin\migrate\process\Flatten;

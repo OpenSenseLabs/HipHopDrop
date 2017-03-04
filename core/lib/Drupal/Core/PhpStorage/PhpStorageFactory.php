@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\PhpStorage;
 
@@ -28,7 +28,7 @@ class PhpStorageFactory {
    * @return \Drupal\Component\PhpStorage\PhpStorageInterface
    *   An instantiated storage for the specified name.
    */
-  static function get($name) {
+  public static function get($name) {
     $configuration = array();
     $overrides = Settings::get('php_storage');
     if (isset($overrides[$name])) {

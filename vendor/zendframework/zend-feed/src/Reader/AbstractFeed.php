@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -127,7 +127,7 @@ abstract class AbstractFeed implements Feed\FeedInterface
     public function current()
     {
         if (substr($this->getType(), 0, 3) == 'rss') {
-            $reader = new Entry\RSS($this->entries[$this->key()], $this->key(), $this->getType());
+            $reader = new Entry\Rss($this->entries[$this->key()], $this->key(), $this->getType());
         } else {
             $reader = new Entry\Atom($this->entries[$this->key()], $this->key(), $this->getType());
         }

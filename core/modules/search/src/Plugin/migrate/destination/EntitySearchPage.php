@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Plugin\migrate\destination;
 

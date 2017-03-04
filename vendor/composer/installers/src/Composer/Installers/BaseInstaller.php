@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace Composer\Installers;
 
 use Composer\Composer;
@@ -16,7 +16,7 @@ abstract class BaseInstaller
      * @param PackageInterface $package
      * @param Composer         $composer
      */
-    public function __construct(PackageInterface $package = null, Composer $composer = null)
+    public function __construct(?PackageInterface $package = null, ?Composer $composer = null)
     {
         $this->composer = $composer;
         $this->package = $package;

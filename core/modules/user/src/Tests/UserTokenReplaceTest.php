@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\user\Tests;
 
@@ -34,7 +34,7 @@ class UserTokenReplaceTest extends WebTestBase {
   /**
    * Creates a user, then tests the tokens generated from it.
    */
-  function testUserTokenReplacement() {
+  public function testUserTokenReplacement() {
     $token_service = \Drupal::token();
     $language_interface = \Drupal::languageManager()->getCurrentLanguage();
     $url_options = array(

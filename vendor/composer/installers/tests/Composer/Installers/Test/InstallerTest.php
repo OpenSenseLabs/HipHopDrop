@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Composer\Installers\Test;
 
 use Composer\Installers\Installer;
@@ -26,7 +26,7 @@ class InstallerTest extends TestCase
      */
     public function setUp()
     {
-        $this->fs = new Filesystem;
+        $this->fs = new Filesystem();
 
         $this->composer = new Composer();
         $this->config = new Config();

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\user\Kernel;
 
@@ -36,7 +36,7 @@ class UserFieldsTest extends KernelTestBase {
   /**
    * Tests account's available fields.
    */
-  function testUserFields() {
+  public function testUserFields() {
     // Create the user to test the user fields.
     $user = User::create([
       'name' => 'foobar',

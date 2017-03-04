@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\views\Plugin\views\filter;
 
@@ -29,7 +29,7 @@ class NumericFilter extends FilterPluginBase {
     return $options;
   }
 
-  function operators() {
+  public function operators() {
     $operators = array(
       '<' => array(
         'title' => $this->t('Is less than'),

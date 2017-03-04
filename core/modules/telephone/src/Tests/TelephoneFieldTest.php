@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\telephone\Tests;
 
@@ -44,7 +44,7 @@ class TelephoneFieldTest extends WebTestBase {
   /**
    * Helper function for testTelephoneField().
    */
-  function testTelephoneField() {
+  public function testTelephoneField() {
 
     // Add the telephone field to the article content type.
     FieldStorageConfig::create(array(

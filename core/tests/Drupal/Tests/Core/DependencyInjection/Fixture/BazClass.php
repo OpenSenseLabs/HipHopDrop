@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\Tests\Core\DependencyInjection\Fixture;
 

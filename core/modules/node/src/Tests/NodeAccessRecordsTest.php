@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -21,7 +21,7 @@ class NodeAccessRecordsTest extends NodeTestBase {
   /**
    * Creates a node and tests the creation of node access rules.
    */
-  function testNodeAccessRecords() {
+  public function testNodeAccessRecords() {
     // Create an article node.
     $node1 = $this->drupalCreateNode(array('type' => 'article'));
     $this->assertTrue(Node::load($node1->id()), 'Article node created.');

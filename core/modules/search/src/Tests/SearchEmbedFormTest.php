@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Tests;
 
@@ -50,7 +50,7 @@ class SearchEmbedFormTest extends SearchTestBase {
   /**
    * Tests that the embedded form appears and can be submitted.
    */
-  function testEmbeddedForm() {
+  public function testEmbeddedForm() {
     // First verify we can submit the form from the module's page.
     $this->drupalPostForm('search_embedded_form',
       array('name' => 'John'),

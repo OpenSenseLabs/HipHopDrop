@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\config\Tests;
 
@@ -34,7 +34,7 @@ class ConfigLanguageOverrideWebTest extends WebTestBase {
   /**
    * Tests translating the site name.
    */
-  function testSiteNameTranslation() {
+  public function testSiteNameTranslation() {
     $adminUser = $this->drupalCreateUser(array('administer site configuration', 'administer languages'));
     $this->drupalLogin($adminUser);
 

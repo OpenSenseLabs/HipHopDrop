@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\FileTransfer;
 
@@ -17,7 +17,7 @@ class Local extends FileTransfer implements ChmodInterface {
   /**
    * {@inheritdoc}
    */
-  static function factory($jail, $settings) {
+  public static function factory($jail, $settings) {
     return new Local($jail);
   }
 

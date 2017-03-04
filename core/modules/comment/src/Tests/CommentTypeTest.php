@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment\Tests;
 use Drupal\comment\Entity\Comment;

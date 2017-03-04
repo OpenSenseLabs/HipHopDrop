@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\views\Kernel\Handler;
 
@@ -20,7 +20,7 @@ class FieldFileSizeTest extends ViewsKernelTestBase {
    */
   public static $testViews = array('test_view');
 
-  function dataSet() {
+  public function dataSet() {
     $data = parent::dataSet();
     $data[0]['age'] = 0;
     $data[1]['age'] = 10;
@@ -30,7 +30,7 @@ class FieldFileSizeTest extends ViewsKernelTestBase {
     return $data;
   }
 
-  function viewsData() {
+  public function viewsData() {
     $data = parent::viewsData();
     $data['views_test_data']['age']['field']['id'] = 'file_size';
 

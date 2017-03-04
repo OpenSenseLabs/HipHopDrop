@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Theme;
 
@@ -26,7 +26,7 @@ class FastTest extends WebTestBase {
   /**
    * Tests access to user autocompletion and verify the correct results.
    */
-  function testUserAutocomplete() {
+  public function testUserAutocomplete() {
     $this->drupalLogin($this->account);
     $this->drupalGet('user/autocomplete', array('query' => array('q' => $this->account->getUsername())));
     $this->assertRaw($this->account->getUsername());

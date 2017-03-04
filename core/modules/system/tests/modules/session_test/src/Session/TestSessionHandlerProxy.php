@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\session_test\Session;
 

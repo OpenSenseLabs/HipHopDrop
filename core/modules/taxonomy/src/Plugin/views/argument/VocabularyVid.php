@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\taxonomy\Plugin\views\argument;
 
@@ -54,7 +54,7 @@ class VocabularyVid extends NumericArgument {
   /**
    * Override the behavior of title(). Get the name of the vocabulary.
    */
-  function title() {
+  public function title() {
     $vocabulary = $this->vocabularyStorage->load($this->argument);
     if ($vocabulary) {
       return $vocabulary->label();

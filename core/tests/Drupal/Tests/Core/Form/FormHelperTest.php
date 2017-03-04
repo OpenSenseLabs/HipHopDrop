@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Tests\Core\Form;
 
@@ -16,7 +16,7 @@ class FormHelperTest extends UnitTestCase {
    *
    * @covers ::rewriteStatesSelector
    */
-  function testRewriteStatesSelector() {
+  public function testRewriteStatesSelector() {
 
     // Simple selectors.
     $value = array('value' => 'medium');

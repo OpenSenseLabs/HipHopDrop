@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\simpletest\Tests;
 
@@ -19,7 +19,7 @@ class FolderTest extends WebTestBase {
    */
   public static $modules = array('image');
 
-  function testFolderSetup() {
+  public function testFolderSetup() {
     $directory = file_default_scheme() . '://styles';
     $this->assertTrue(file_prepare_directory($directory, FALSE), 'Directory created.');
   }

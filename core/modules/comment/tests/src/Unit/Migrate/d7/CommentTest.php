@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\comment\Unit\Migrate\d7;
 

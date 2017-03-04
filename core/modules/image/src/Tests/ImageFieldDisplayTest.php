@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\image\Tests;
 
@@ -26,14 +26,14 @@ class ImageFieldDisplayTest extends ImageFieldTestBase {
   /**
    * Test image formatters on node display for public files.
    */
-  function testImageFieldFormattersPublic() {
+  public function testImageFieldFormattersPublic() {
     $this->_testImageFieldFormatters('public');
   }
 
   /**
    * Test image formatters on node display for private files.
    */
-  function testImageFieldFormattersPrivate() {
+  public function testImageFieldFormattersPrivate() {
     // Remove access content permission from anonymous users.
     user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array('access content' => FALSE));
     $this->_testImageFieldFormatters('private');
@@ -42,7 +42,7 @@ class ImageFieldDisplayTest extends ImageFieldTestBase {
   /**
    * Test image formatters on node display.
    */
-  function _testImageFieldFormatters($scheme) {
+  public function _testImageFieldFormatters($scheme) {
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
     $renderer = $this->container->get('renderer');
     $node_storage = $this->container->get('entity.manager')->getStorage('node');
@@ -204,7 +204,7 @@ class ImageFieldDisplayTest extends ImageFieldTestBase {
   /**
    * Tests for image field settings.
    */
-  function testImageFieldSettings() {
+  public function testImageFieldSettings() {
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
     $renderer = $this->container->get('renderer');
     $node_storage = $this->container->get('entity.manager')->getStorage('node');
@@ -319,7 +319,7 @@ class ImageFieldDisplayTest extends ImageFieldTestBase {
   /**
    * Test use of a default image with an image field.
    */
-  function testImageFieldDefaultImage() {
+  public function testImageFieldDefaultImage() {
     /** @var \Drupal\Core\Render\RendererInterface $renderer */
     $renderer = $this->container->get('renderer');
 

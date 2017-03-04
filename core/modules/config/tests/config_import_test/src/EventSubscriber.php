@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\config_import_test;
 
@@ -131,7 +131,7 @@ class EventSubscriber implements EventSubscriberInterface {
    * @return array
    *   An array of event listener definitions.
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::SAVE][] = array('onConfigSave', 40);
     $events[ConfigEvents::DELETE][] = array('onConfigDelete', 40);
     $events[ConfigEvents::IMPORT_VALIDATE] = array('onConfigImporterValidate');

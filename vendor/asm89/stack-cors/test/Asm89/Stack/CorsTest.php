@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Asm89\Stack;
 

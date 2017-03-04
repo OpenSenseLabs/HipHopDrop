@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Theme;
 
@@ -45,7 +45,7 @@ class ImageTest extends KernelTestBase {
   /**
    * Tests that an image with the sizes attribute is output correctly.
    */
-  function testThemeImageWithSizes() {
+  public function testThemeImageWithSizes() {
     // Test with multipliers.
     $sizes = '(max-width: ' . rand(10, 30) . 'em) 100vw, (max-width: ' . rand(30, 50) . 'em) 50vw, 30vw';
     $image = array(
@@ -66,7 +66,7 @@ class ImageTest extends KernelTestBase {
   /**
    * Tests that an image with the src attribute is output correctly.
    */
-  function testThemeImageWithSrc() {
+  public function testThemeImageWithSrc() {
 
     $image = array(
       '#theme' => 'image',
@@ -85,7 +85,7 @@ class ImageTest extends KernelTestBase {
   /**
    * Tests that an image with the srcset and multipliers is output correctly.
    */
-  function testThemeImageWithSrcsetMultiplier() {
+  public function testThemeImageWithSrcsetMultiplier() {
     // Test with multipliers.
     $image = array(
       '#theme' => 'image',
@@ -113,7 +113,7 @@ class ImageTest extends KernelTestBase {
   /**
    * Tests that an image with the srcset and widths is output correctly.
    */
-  function testThemeImageWithSrcsetWidth() {
+  public function testThemeImageWithSrcsetWidth() {
     // Test with multipliers.
     $widths = array(
       rand(0, 500) . 'w',

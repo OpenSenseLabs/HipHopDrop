@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\file\Tests;
 
@@ -14,7 +14,7 @@ class FileManagedAccessTest extends FileManagedTestBase {
   /**
    * Tests if public file is always accessible.
    */
-  function testFileAccess() {
+  public function testFileAccess() {
     // Create a new file entity.
     $file = File::create(array(
       'uid' => 1,

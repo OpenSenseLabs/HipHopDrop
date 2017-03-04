@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\help_page_test\Plugin\HelpSection;
 

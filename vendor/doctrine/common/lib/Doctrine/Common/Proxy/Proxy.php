@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -50,7 +50,7 @@ interface Proxy extends BaseProxy
      *
      * @return void
      */
-    public function __setInitializer(Closure $initializer = null);
+    public function __setInitializer(?Closure $initializer = null);
 
     /**
      * Retrieves the initializer callback used to initialize the proxy.
@@ -69,7 +69,7 @@ interface Proxy extends BaseProxy
      *
      * @return void
      */
-    public function __setCloner(Closure $cloner = null);
+    public function __setCloner(?Closure $cloner = null);
 
     /**
      * Retrieves the callback to be used when cloning the proxy.

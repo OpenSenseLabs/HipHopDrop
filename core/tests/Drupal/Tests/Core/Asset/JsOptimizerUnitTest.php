@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Core\Asset;
 
@@ -36,7 +36,7 @@ class JsOptimizerUnitTest extends UnitTestCase {
    * @returns array
    *   An array of test data.
    */
-  function providerTestClean() {
+  public function providerTestClean() {
     $path = dirname(__FILE__) . '/js_test_files/';
     return array(
       // File. Tests:
@@ -71,7 +71,7 @@ class JsOptimizerUnitTest extends UnitTestCase {
    *
    * @dataProvider providerTestClean
    */
-  function testClean($js_asset, $expected) {
+  public function testClean($js_asset, $expected) {
     $this->assertEquals($expected, $this->optimizer->clean($js_asset));
   }
 
@@ -83,7 +83,7 @@ class JsOptimizerUnitTest extends UnitTestCase {
    * @returns array
    *   An array of test data.
    */
-  function providerTestOptimize() {
+  public function providerTestOptimize() {
     $path = dirname(__FILE__) . '/js_test_files/';
     return array(
       0 => array(
@@ -119,7 +119,7 @@ class JsOptimizerUnitTest extends UnitTestCase {
    *
    * @dataProvider providerTestOptimize
    */
-  function testOptimize($js_asset, $expected) {
+  public function testOptimize($js_asset, $expected) {
     $this->assertEquals($expected, $this->optimizer->optimize($js_asset));
   }
 

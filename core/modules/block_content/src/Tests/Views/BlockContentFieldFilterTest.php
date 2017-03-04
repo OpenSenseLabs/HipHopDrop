@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block_content\Tests\Views;
 
@@ -35,7 +35,7 @@ class BlockContentFieldFilterTest extends BlockContentTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  public function setUp() {
     parent::setUp();
 
     // Add two new languages.

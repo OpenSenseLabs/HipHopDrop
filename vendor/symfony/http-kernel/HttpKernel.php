@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -46,7 +46,7 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
      * @param ControllerResolverInterface $resolver     A ControllerResolverInterface instance
      * @param RequestStack                $requestStack A stack for master/sub requests
      */
-    public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, RequestStack $requestStack = null)
+    public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, ?RequestStack $requestStack = null)
     {
         $this->dispatcher = $dispatcher;
         $this->resolver = $resolver;

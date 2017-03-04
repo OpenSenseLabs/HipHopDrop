@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\responsive_image_test_module\Plugin\Field\FieldFormatter;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp;
 
 use Psr\Http\Message\RequestInterface;
@@ -26,7 +26,7 @@ final class TransferStats
      */
     public function __construct(
         RequestInterface $request,
-        ResponseInterface $response = null,
+        ?ResponseInterface $response = null,
         $transferTime = null,
         $handlerErrorData = null,
         $handlerStats = []

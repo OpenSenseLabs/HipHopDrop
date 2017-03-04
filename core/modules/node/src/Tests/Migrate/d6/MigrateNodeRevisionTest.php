@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests\Migrate\d6;
 use Drupal\Tests\node\Kernel\Migrate\d6\MigrateNodeTestBase;

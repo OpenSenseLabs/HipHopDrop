@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -23,7 +23,7 @@ interface HelperInterface
      *
      * @param HelperSet $helperSet A HelperSet instance
      */
-    public function setHelperSet(HelperSet $helperSet = null);
+    public function setHelperSet(?HelperSet $helperSet = null);
 
     /**
      * Gets the helper set associated with this helper.

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of composer/semver.

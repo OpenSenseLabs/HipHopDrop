@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\file\Tests;
 
@@ -15,7 +15,7 @@ class FileFieldDisplayTest extends FileFieldTestBase {
   /**
    * Tests normal formatter display on node display.
    */
-  function testNodeDisplay() {
+  public function testNodeDisplay() {
     $field_name = strtolower($this->randomMachineName());
     $type_name = 'article';
     $field_storage_settings = array(
@@ -102,7 +102,7 @@ class FileFieldDisplayTest extends FileFieldTestBase {
   /**
    * Tests default display of File Field.
    */
-  function testDefaultFileFieldDisplay() {
+  public function testDefaultFileFieldDisplay() {
     $field_name = strtolower($this->randomMachineName());
     $type_name = 'article';
     $field_storage_settings = array(
@@ -129,7 +129,7 @@ class FileFieldDisplayTest extends FileFieldTestBase {
   /**
    * Tests description toggle for field instance configuration.
    */
-  function testDescToggle() {
+  public function testDescToggle() {
     $type_name = 'test';
     $field_type = 'file';
     $field_name = strtolower($this->randomMachineName());

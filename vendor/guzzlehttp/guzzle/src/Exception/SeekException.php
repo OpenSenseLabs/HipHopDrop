@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp\Exception;
 
 use Psr\Http\Message\StreamInterface;

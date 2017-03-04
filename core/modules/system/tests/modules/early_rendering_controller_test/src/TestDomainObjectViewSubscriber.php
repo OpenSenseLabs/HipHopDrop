@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\early_rendering_controller_test;
 
@@ -37,7 +37,7 @@ class TestDomainObjectViewSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::VIEW][] = ['onViewTestDomainObject'];
 
     return $events;

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony CMF package.
@@ -35,7 +35,7 @@ class ProviderBasedGenerator extends UrlGenerator implements VersatileGeneratorI
      * @param RouteProviderInterface $provider
      * @param LoggerInterface        $logger
      */
-    public function __construct(RouteProviderInterface $provider, LoggerInterface $logger = null)
+    public function __construct(RouteProviderInterface $provider, ?LoggerInterface $logger = null)
     {
         $this->provider = $provider;
         $this->logger = $logger;

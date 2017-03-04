@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\rdf\Tests;
 
@@ -21,7 +21,7 @@ class GetRdfNamespacesTest extends WebTestBase {
   /**
    * Tests getting RDF namespaces.
    */
-  function testGetRdfNamespaces() {
+  public function testGetRdfNamespaces() {
     // Get all RDF namespaces.
     $ns = rdf_get_namespaces();
 

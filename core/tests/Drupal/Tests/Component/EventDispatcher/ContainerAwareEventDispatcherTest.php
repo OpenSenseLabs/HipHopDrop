@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 // @codingStandardsIgnoreFile
 
 namespace Drupal\Tests\Component\EventDispatcher;

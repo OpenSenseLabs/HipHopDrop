@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\config;
 
@@ -29,7 +29,7 @@ class ConfigSubscriber extends ConfigImportValidateEventSubscriberBase {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::IMPORT_VALIDATE][] = array('onConfigImporterValidate', 20);
     return $events;
   }

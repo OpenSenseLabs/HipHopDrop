@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -88,7 +88,7 @@ class EasyRdf_Parser
      */
     protected function checkParseParams($graph, $data, $format, $baseUri)
     {
-        if ($graph == null or !is_object($graph) or
+        if ($graph == null || !is_object($graph) ||
             !($graph instanceof EasyRdf_Graph)) {
             throw new InvalidArgumentException(
                 "\$graph should be an EasyRdf_Graph object and cannot be null"
@@ -97,11 +97,11 @@ class EasyRdf_Parser
             $this->graph = $graph;
         }
 
-        if ($format == null or $format == '') {
+        if ($format == null || $format == '') {
             throw new InvalidArgumentException(
                 "\$format cannot be null or empty"
             );
-        } elseif (is_object($format) and $format instanceof EasyRdf_Format) {
+        } elseif (is_object($format) && $format instanceof EasyRdf_Format) {
             $this->format = $format = $format->getName();
         } elseif (!is_string($format)) {
             throw new InvalidArgumentException(

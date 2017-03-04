@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\user\Tests;
 
@@ -15,7 +15,7 @@ class UserSaveTest extends WebTestBase {
   /**
    * Test creating a user with arbitrary uid.
    */
-  function testUserImport() {
+  public function testUserImport() {
     // User ID must be a number that is not in the database.
 
     $uids = \Drupal::entityManager()->getStorage('user')->getQuery()
@@ -48,7 +48,7 @@ class UserSaveTest extends WebTestBase {
   /**
    * Ensures that an existing password is unset after the user was saved.
    */
-  function testExistingPasswordRemoval() {
+  public function testExistingPasswordRemoval() {
     /** @var \Drupal\user\Entity\User $user */
     $user = User::create(['name' => $this->randomMachineName()]);
     $user->save();

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Module;
 
@@ -11,7 +11,7 @@ class RequiredTest extends ModuleTestBase {
   /**
    * Assert that core required modules cannot be disabled.
    */
-  function testDisableRequired() {
+  public function testDisableRequired() {
     $module_info = system_get_info('module');
     $this->drupalGet('admin/modules');
     foreach ($module_info as $module => $info) {

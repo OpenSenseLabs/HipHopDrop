@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Update;
 
@@ -25,7 +25,7 @@ class DependencyMissingTest extends WebTestBase {
     require_once \Drupal::root() . '/core/includes/update.inc';
   }
 
-  function testMissingUpdate() {
+  public function testMissingUpdate() {
     $starting_updates = array(
       'update_test_2' => 8001,
     );

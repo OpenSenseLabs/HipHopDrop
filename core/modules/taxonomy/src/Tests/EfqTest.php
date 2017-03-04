@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests;
 
@@ -25,7 +25,7 @@ class EfqTest extends TaxonomyTestBase {
   /**
    * Tests that a basic taxonomy entity query works.
    */
-  function testTaxonomyEfq() {
+  public function testTaxonomyEfq() {
     $terms = array();
     for ($i = 0; $i < 5; $i++) {
       $term = $this->createTerm($this->vocabulary);

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\update_test;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Masterminds;
 
 use Masterminds\HTML5\Parser\FileInputStream;

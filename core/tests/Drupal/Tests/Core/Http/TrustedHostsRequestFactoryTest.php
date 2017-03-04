@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Core\Http;
 use Drupal\Core\Http\TrustedHostsRequestFactory;

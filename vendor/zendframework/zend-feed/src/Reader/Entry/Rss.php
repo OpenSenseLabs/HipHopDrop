@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -418,7 +418,7 @@ class Rss extends AbstractEntry implements EntryInterface
         }
 
         if ($list->length) {
-            $categoryCollection = new Reader\Collection\Category;
+            $categoryCollection = new Reader\Collection\Category();
             foreach ($list as $category) {
                 $categoryCollection[] = [
                     'term' => $category->nodeValue,

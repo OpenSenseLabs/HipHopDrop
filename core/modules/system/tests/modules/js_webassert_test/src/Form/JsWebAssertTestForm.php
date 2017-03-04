@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\js_webassert_test\Form;
 

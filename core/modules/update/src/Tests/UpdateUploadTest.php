@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\update\Tests;
 
@@ -129,7 +129,7 @@ class UpdateUploadTest extends UpdateTestBase {
   /**
    * Ensures that archiver extensions are properly merged in the UI.
    */
-  function testFileNameExtensionMerging() {
+  public function testFileNameExtensionMerging() {
     $this->drupalGet('admin/modules/install');
     // Make sure the bogus extension supported by update_test.module is there.
     $this->assertPattern('/file extensions are supported:.*update-test-extension/', "Found 'update-test-extension' extension.");
@@ -140,7 +140,7 @@ class UpdateUploadTest extends UpdateTestBase {
   /**
    * Checks the messages on update manager pages when missing a security update.
    */
-  function testUpdateManagerCoreSecurityUpdateMessages() {
+  public function testUpdateManagerCoreSecurityUpdateMessages() {
     $setting = array(
       '#all' => array(
         'version' => '8.0.0',

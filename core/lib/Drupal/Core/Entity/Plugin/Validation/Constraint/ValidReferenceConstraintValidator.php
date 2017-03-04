@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Entity\Plugin\Validation\Constraint;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -102,7 +102,7 @@ interface ValidatorBuilderInterface
      *
      * @return $this
      */
-    public function enableAnnotationMapping(Reader $annotationReader = null);
+    public function enableAnnotationMapping(?Reader $annotationReader = null);
 
     /**
      * Disables annotation based constraint mapping.

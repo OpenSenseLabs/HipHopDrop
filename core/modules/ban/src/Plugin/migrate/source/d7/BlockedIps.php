@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ban\Plugin\migrate\source\d7;
 

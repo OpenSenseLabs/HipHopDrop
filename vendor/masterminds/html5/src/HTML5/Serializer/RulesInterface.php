@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * @file
  * The interface definition for Rules to generate output.

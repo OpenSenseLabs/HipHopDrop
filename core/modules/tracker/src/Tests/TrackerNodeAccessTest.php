@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\tracker\Tests;
 
@@ -35,7 +35,7 @@ class TrackerNodeAccessTest extends WebTestBase {
   /**
    * Ensure private node on /tracker is only visible to users with permission.
    */
-  function testTrackerNodeAccess() {
+  public function testTrackerNodeAccess() {
     // Create user with node test view permission.
     $access_user = $this->drupalCreateUser(array('node test view', 'access user profiles'));
 

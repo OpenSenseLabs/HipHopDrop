@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\system\Tests\Entity;
 
@@ -43,7 +43,7 @@ class EntityTranslationFormTest extends WebTestBase {
   /**
    * Tests entity form language.
    */
-  function testEntityFormLanguage() {
+  public function testEntityFormLanguage() {
     $this->drupalCreateContentType(array('type' => 'page', 'name' => 'Basic page'));
 
     $web_user = $this->drupalCreateUser(array('create page content', 'edit own page content', 'administer content types'));

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Provide general element functions.
  */

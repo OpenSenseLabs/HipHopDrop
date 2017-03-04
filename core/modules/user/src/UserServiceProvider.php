@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 // @codingStandardsIgnoreFile
 // This class is intentionally empty so that it overwrites when sites are
 // updated from a zip/tarball without deleting the /core folder first.

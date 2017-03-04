@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\simpletest\Tests;
 
@@ -14,7 +14,7 @@ class UserHelpersTest extends WebTestBase {
   /**
    * Tests WebTestBase::drupalUserIsLoggedIn().
    */
-  function testDrupalUserIsLoggedIn() {
+  public function testDrupalUserIsLoggedIn() {
     $first_user = $this->drupalCreateUser();
     $second_user = $this->drupalCreateUser();
 

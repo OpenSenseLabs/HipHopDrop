@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\big_pipe\Unit\Render\Placeholder;
 

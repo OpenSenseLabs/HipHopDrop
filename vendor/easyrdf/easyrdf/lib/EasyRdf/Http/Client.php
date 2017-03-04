@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -160,7 +160,7 @@ class EasyRdf_Http_Client
      */
     public function setConfig($config = array())
     {
-        if ($config == null or !is_array($config)) {
+        if ($config == null || !is_array($config)) {
             throw new InvalidArgumentException(
                 "\$config should be an array and cannot be null"
             );
@@ -206,7 +206,7 @@ class EasyRdf_Http_Client
      */
     public function setMethod($method)
     {
-        if (!is_string($method) or !preg_match('/^[A-Z]+$/', $method)) {
+        if (!is_string($method) || !preg_match('/^[A-Z]+$/', $method)) {
             throw new InvalidArgumentException("Invalid HTTP request method.");
         }
 
@@ -522,7 +522,7 @@ class EasyRdf_Http_Client
         // Set the host header
         if (! isset($this->headers['host'])) {
             // If the port is not default, add it
-            if ($port !== 80 and $port !== 443) {
+            if ($port !== 80 && $port !== 443) {
                 $host .= ':' . $port;
             }
             $headers[] = "Host: {$host}";

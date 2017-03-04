@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\update\Kernel\Migrate\d6;
 

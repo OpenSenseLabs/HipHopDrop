@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\views\Unit\Plugin\argument_default;
 

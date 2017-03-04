@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\dynamic_page_cache_test;
 

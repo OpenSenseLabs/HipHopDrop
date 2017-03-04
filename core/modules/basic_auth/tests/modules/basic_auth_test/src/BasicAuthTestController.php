@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\basic_auth_test;
 

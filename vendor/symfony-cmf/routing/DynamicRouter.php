@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony CMF package.
@@ -95,8 +95,8 @@ class DynamicRouter implements RouterInterface, RequestMatcherInterface, Chained
                                 $matcher,
                                 UrlGeneratorInterface $generator,
                                 $uriFilterRegexp = '',
-                                EventDispatcherInterface $eventDispatcher = null,
-                                RouteProviderInterface $provider = null
+                                ?EventDispatcherInterface $eventDispatcher = null,
+                                ?RouteProviderInterface $provider = null
     ) {
         $this->context = $context;
         if (!$matcher instanceof RequestMatcherInterface && !$matcher instanceof UrlMatcherInterface) {

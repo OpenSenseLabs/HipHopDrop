@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\filter\Tests;
 
@@ -74,7 +74,7 @@ class FilterHtmlImageSecureTest extends WebTestBase {
   /**
    * Tests removal of images having a non-local source.
    */
-  function testImageSource() {
+  public function testImageSource() {
     global $base_url;
 
     $public_files_path = PublicStream::basePath();

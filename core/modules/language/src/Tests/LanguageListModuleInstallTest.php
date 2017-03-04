@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\language\Tests;
 
@@ -22,7 +22,7 @@ class LanguageListModuleInstallTest extends WebTestBase {
   /**
    * Tests enabling Language.
    */
-  function testModuleInstallLanguageList() {
+  public function testModuleInstallLanguageList() {
     // Since LanguageManager::getLanguages() uses static caches we need to do
     // this by enabling the module using the UI.
     $admin_user = $this->drupalCreateUser(array('access administration pages', 'administer modules'));

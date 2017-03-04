@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\Core\Field\Plugin\DataType;
 

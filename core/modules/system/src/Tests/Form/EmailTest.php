@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Form;
 
@@ -24,7 +24,7 @@ class EmailTest extends WebTestBase {
   /**
    * Tests that #type 'email' fields are properly validated.
    */
-  function testFormEmail() {
+  public function testFormEmail() {
     $edit = array();
     $edit['email'] = 'invalid';
     $edit['email_required'] = ' ';

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\migrate_prepare_row_test\Plugin\migrate\process;
 

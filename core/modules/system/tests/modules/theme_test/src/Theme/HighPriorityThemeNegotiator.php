@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\theme_test\Theme;
 

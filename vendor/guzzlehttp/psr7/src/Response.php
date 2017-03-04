@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp\Psr7;
 
 use Psr\Http\Message\ResponseInterface;

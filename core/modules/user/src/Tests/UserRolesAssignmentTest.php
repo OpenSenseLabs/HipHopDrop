@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\user\Tests;
 
@@ -21,7 +21,7 @@ class UserRolesAssignmentTest extends WebTestBase {
    * Tests that a user can be assigned a role and that the role can be removed
    * again.
    */
-  function testAssignAndRemoveRole()  {
+  public function testAssignAndRemoveRole()  {
     $rid = $this->drupalCreateRole(array('administer users'));
     $account = $this->drupalCreateUser();
 
@@ -42,7 +42,7 @@ class UserRolesAssignmentTest extends WebTestBase {
    * Tests that when creating a user the role can be assigned. And that it can
    * be removed again.
    */
-  function testCreateUserWithRole() {
+  public function testCreateUserWithRole() {
     $rid = $this->drupalCreateRole(array('administer users'));
     // Create a new user and add the role at the same time.
     $edit = array(

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace GuzzleHttp\Handler;
 
 use GuzzleHttp\Exception\RequestException;
@@ -75,7 +75,7 @@ class StreamHandler
         array $options,
         RequestInterface $request,
         $startTime,
-        ResponseInterface $response = null,
+        ?ResponseInterface $response = null,
         $error = null
     ) {
         if (isset($options['on_stats'])) {

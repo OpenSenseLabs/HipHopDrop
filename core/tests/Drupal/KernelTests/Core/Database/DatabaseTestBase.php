@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Database;
 
@@ -34,7 +34,7 @@ abstract class DatabaseTestBase extends KernelTestBase {
   /**
    * Sets up tables for NULL handling.
    */
-  function ensureSampleDataNull() {
+  public function ensureSampleDataNull() {
     db_insert('test_null')
       ->fields(array('name', 'age'))
       ->values(array(
@@ -55,7 +55,7 @@ abstract class DatabaseTestBase extends KernelTestBase {
   /**
    * Sets up our sample data.
    */
-  static function addSampleData() {
+  public static function addSampleData() {
     // We need the IDs, so we can't use a multi-insert here.
     $john = db_insert('test')
       ->fields(array(

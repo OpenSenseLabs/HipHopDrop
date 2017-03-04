@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\config_events_test;
 
@@ -48,7 +48,7 @@ class EventSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::SAVE][] = array('configEventRecorder');
     $events[ConfigEvents::DELETE][] = array('configEventRecorder');
     $events[ConfigEvents::RENAME][] = array('configEventRecorder');

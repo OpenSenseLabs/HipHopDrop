@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\language\Unit\Menu;
 

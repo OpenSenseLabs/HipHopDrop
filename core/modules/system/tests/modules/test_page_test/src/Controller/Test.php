@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\test_page_test\Controller;
 use Symfony\Component\HttpKernel\Exception\HttpException;

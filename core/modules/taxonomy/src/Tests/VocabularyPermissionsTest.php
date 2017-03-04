@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests;
 
@@ -18,7 +18,7 @@ class VocabularyPermissionsTest extends TaxonomyTestBase {
   /**
    * Create, edit and delete a taxonomy term via the user interface.
    */
-  function testVocabularyPermissionsTaxonomyTerm() {
+  public function testVocabularyPermissionsTaxonomyTerm() {
     // Vocabulary used for creating, removing and editing terms.
     $vocabulary = $this->createVocabulary();
 

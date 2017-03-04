@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Tests\image\Kernel;
 
@@ -84,7 +84,7 @@ class ImageFormatterTest extends FieldKernelTestBase {
   /**
    * Tests the cache tags from image formatters.
    */
-  function testImageFormatterCacheTags() {
+  public function testImageFormatterCacheTags() {
     // Create a test entity with the image field set.
     $entity = EntityTest::create([
       'name' => $this->randomMachineName(),

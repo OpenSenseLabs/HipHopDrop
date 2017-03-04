@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\contact\Kernel\Plugin\migrate\source\d6;
 

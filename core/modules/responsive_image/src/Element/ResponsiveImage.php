@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\responsive_image\Element;
 

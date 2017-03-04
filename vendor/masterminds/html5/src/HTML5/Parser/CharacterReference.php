@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Masterminds\HTML5\Parser;
 
 use Masterminds\HTML5\Entities;

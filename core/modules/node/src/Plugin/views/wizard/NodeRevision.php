@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Plugin\views\wizard;
 

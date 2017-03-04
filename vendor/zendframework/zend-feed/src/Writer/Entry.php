@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -715,7 +715,7 @@ class Entry
      */
     public function createSource()
     {
-        $source = new Source;
+        $source = new Source();
         if ($this->getEncoding()) {
             $source->setEncoding($this->getEncoding());
         }

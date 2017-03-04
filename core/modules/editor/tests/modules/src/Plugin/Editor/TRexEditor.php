@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\editor_test\Plugin\Editor;
 

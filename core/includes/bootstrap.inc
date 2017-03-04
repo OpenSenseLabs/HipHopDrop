@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 /**
  * @file
@@ -636,7 +636,7 @@ function drupal_valid_test_ua($new_prefix = NULL) {
     $key_file = DRUPAL_ROOT . '/' . $test_db->getTestSitePath() . '/.htkey';
     if (!is_readable($key_file)) {
       header($_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden');
-      exit;
+      exit(0);
     }
     $private_key = file_get_contents($key_file);
     // The file properties add more entropy not easily accessible to others.
@@ -650,7 +650,7 @@ function drupal_valid_test_ua($new_prefix = NULL) {
     }
     else {
       header($_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden (SIMPLETEST_USER_AGENT invalid)');
-      exit;
+      exit(0);
     }
   }
   return $test_prefix;

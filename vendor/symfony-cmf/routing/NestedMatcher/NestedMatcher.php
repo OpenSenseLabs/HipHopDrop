@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony CMF package.
@@ -69,8 +69,8 @@ class NestedMatcher implements RequestMatcherInterface
      *                                         routes
      */
     public function __construct(
-        RouteProviderInterface $provider = null,
-        FinalMatcherInterface $final = null
+        ?RouteProviderInterface $provider = null,
+        ?FinalMatcherInterface $final = null
     ) {
         if (null !== $provider) {
             $this->setRouteProvider($provider);

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Datetime;
 
@@ -101,7 +101,7 @@ class DrupalDateTimeTest extends WebTestBase {
   /**
    * Tests the ability to override the time zone in the format method.
    */
-  function testTimezoneFormat() {
+  public function testTimezoneFormat() {
     // Create a date in UTC
     $date = DrupalDateTime::createFromTimestamp(87654321, 'UTC');
 

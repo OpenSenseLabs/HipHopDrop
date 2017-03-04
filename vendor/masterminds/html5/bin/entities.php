@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Fetch the entities.json file and convert to PHP datastructure.
  */

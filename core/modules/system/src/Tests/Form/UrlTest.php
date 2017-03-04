@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Form;
 
@@ -24,7 +24,7 @@ class UrlTest extends WebTestBase {
   /**
    * Tests that #type 'url' fields are properly validated and trimmed.
    */
-  function testFormUrl() {
+  public function testFormUrl() {
     $edit = array();
     $edit['url'] = 'http://';
     $edit['url_required'] = ' ';

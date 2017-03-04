@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block_content\Tests\Views;
 
@@ -20,7 +20,7 @@ class RevisionRelationshipsTest extends ViewTestBase {
    *
    * @var array
    */
-  public static $modules = array('block_content' , 'block_content_test_views');
+  public static $modules = array('block_content', 'block_content_test_views');
 
   /**
    * Views used by this test.

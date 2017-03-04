@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block\Tests;
 
@@ -31,7 +31,7 @@ class BlockFormInBlockTest extends WebTestBase {
   /**
    * Test to see if form in block's redirect isn't cached.
    */
-  function testCachePerPage() {
+  public function testCachePerPage() {
     $form_values = ['email' => 'test@example.com'];
 
     // Go to "test-page" and test if the block is enabled.

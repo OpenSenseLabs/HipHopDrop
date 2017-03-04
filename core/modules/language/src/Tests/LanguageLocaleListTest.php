@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\language\Tests;
 
@@ -30,7 +30,7 @@ class LanguageLocaleListTest extends WebTestBase {
   /**
    * Tests adding, editing, and deleting languages.
    */
-  function testLanguageLocaleList() {
+  public function testLanguageLocaleList() {
     // User to add and remove language.
     $admin_user = $this->drupalCreateUser(array('administer languages', 'access administration pages'));
     $this->drupalLogin($admin_user);

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -26,7 +26,7 @@ class ServiceUnavailableHttpException extends HttpException
      * @param \Exception $previous   The previous exception
      * @param int        $code       The internal exception code
      */
-    public function __construct($retryAfter = null, $message = null, \Exception $previous = null, $code = 0)
+    public function __construct($retryAfter = null, $message = null, ?\Exception $previous = null, $code = 0)
     {
         $headers = array();
         if ($retryAfter) {

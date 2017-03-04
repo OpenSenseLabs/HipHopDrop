@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -136,7 +136,7 @@ class EasyRdf_Namespace
       */
     public static function get($prefix)
     {
-        if (!is_string($prefix) or $prefix === null) {
+        if (!is_string($prefix) || $prefix === null) {
             throw new InvalidArgumentException(
                 "\$prefix should be a string and cannot be null or empty"
             );
@@ -166,7 +166,7 @@ class EasyRdf_Namespace
       */
     public static function set($prefix, $long)
     {
-        if (!is_string($prefix) or $prefix === null) {
+        if (!is_string($prefix) || $prefix === null) {
             throw new InvalidArgumentException(
                 "\$prefix should be a string and cannot be null or empty"
             );
@@ -204,7 +204,7 @@ class EasyRdf_Namespace
             }
         }
 
-        if (!is_string($long) or $long === null or $long === '') {
+        if (!is_string($long) || $long === null || $long === '') {
             throw new InvalidArgumentException(
                 "\$long should be a string and cannot be null or empty"
             );
@@ -244,7 +244,7 @@ class EasyRdf_Namespace
       */
     public static function setDefault($namespace)
     {
-        if (is_null($namespace) or $namespace === '') {
+        if (is_null($namespace) || $namespace === '') {
             self::$default = null;
         } elseif (preg_match('/^\w+$/', $namespace)) {
             $namespaces = self::namespaces();
@@ -268,7 +268,7 @@ class EasyRdf_Namespace
       */
     public static function delete($prefix)
     {
-        if (!is_string($prefix) or $prefix === null or $prefix === '') {
+        if (!is_string($prefix) || $prefix === null || $prefix === '') {
             throw new InvalidArgumentException(
                 "\$prefix should be a string and cannot be null or empty"
             );
@@ -307,13 +307,13 @@ class EasyRdf_Namespace
       */
     public static function splitUri($uri, $createNamespace = false)
     {
-        if ($uri === null or $uri === '') {
+        if ($uri === null || $uri === '') {
             throw new InvalidArgumentException(
                 "\$uri cannot be null or empty"
             );
         }
 
-        if (is_object($uri) and ($uri instanceof EasyRdf_Resource)) {
+        if (is_object($uri) && ($uri instanceof EasyRdf_Resource)) {
             $uri = $uri->getUri();
         } elseif (!is_string($uri)) {
             throw new InvalidArgumentException(
@@ -393,7 +393,7 @@ class EasyRdf_Namespace
       */
     public static function expand($shortUri)
     {
-        if (!is_string($shortUri) or $shortUri === '') {
+        if (!is_string($shortUri) || $shortUri === '') {
             throw new InvalidArgumentException(
                 "\$shortUri should be a string and cannot be null or empty"
             );
@@ -407,7 +407,7 @@ class EasyRdf_Namespace
             if ($long) {
                 return $long . $matches[2];
             }
-        } elseif (preg_match('/^(\w+)$/', $shortUri) and isset(self::$default)) {
+        } elseif (preg_match('/^(\w+)$/', $shortUri) && isset(self::$default)) {
             return self::$default . $shortUri;
         }
 

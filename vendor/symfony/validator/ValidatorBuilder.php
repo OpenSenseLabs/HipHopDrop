@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -201,7 +201,7 @@ class ValidatorBuilder implements ValidatorBuilderInterface
     /**
      * {@inheritdoc}
      */
-    public function enableAnnotationMapping(Reader $annotationReader = null)
+    public function enableAnnotationMapping(?Reader $annotationReader = null)
     {
         if (null !== $this->metadataFactory) {
             throw new ValidatorException('You cannot enable annotation mapping after setting a custom metadata factory. Configure your metadata factory instead.');

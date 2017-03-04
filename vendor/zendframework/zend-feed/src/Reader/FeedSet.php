@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -65,7 +65,7 @@ class FeedSet extends ArrayObject
     protected function absolutiseUri($link, $uri = null)
     {
         $linkUri = Uri::factory($link);
-        if (!$linkUri->isAbsolute() or !$linkUri->isValid()) {
+        if (!$linkUri->isAbsolute() || !$linkUri->isValid()) {
             if ($uri !== null) {
                 $uri = Uri::factory($uri);
 

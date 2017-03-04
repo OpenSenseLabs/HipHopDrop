@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\menu_ui\Kernel\Migrate;
 

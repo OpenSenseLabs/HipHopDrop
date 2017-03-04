@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\statistics\Tests;
 
@@ -12,7 +12,7 @@ class StatisticsReportsTest extends StatisticsTestBase {
   /**
    * Tests the "popular content" block.
    */
-  function testPopularContentBlock() {
+  public function testPopularContentBlock() {
     // Clear the block cache to load the Statistics module's block definitions.
     $this->container->get('plugin.manager.block')->clearCachedDefinitions();
 

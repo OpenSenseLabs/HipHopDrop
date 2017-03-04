@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\paramconverter_test;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\outside_in\FunctionalJavascript;
 

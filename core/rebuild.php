@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * @file
@@ -34,7 +34,7 @@ try {
 catch (HttpExceptionInterface $e) {
   $response = new Response('', $e->getStatusCode());
   $response->prepare($request)->send();
-  exit;
+  exit(0);
 }
 
 if (Settings::get('rebuild_access', FALSE) ||

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\field\Plugin\migrate\source\d6;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block\Tests;
 
@@ -34,7 +34,7 @@ class BlockInvalidRegionTest extends WebTestBase {
   /**
    * Tests that blocks assigned to invalid regions work correctly.
    */
-  function testBlockInInvalidRegion() {
+  public function testBlockInInvalidRegion() {
     // Enable a test block and place it in an invalid region.
     $block = $this->drupalPlaceBlock('test_html');
     $block->setRegion('invalid_region');

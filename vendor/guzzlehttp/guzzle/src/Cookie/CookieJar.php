@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp\Cookie;
 
 use Psr\Http\Message\RequestInterface;

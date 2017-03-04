@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\service_provider_test;
 
@@ -57,7 +57,7 @@ class TestClass implements EventSubscriberInterface, DestructableInterface, Cont
    * @return array
    *   An array of event listener definitions.
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::REQUEST][] = array('onKernelRequestTest');
     $events[KernelEvents::RESPONSE][] = array('onKernelResponseTest');
     return $events;

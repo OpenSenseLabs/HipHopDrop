@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -21,7 +21,7 @@ class Parameters extends PhpArrayObject implements ParametersInterface
      *
      * @param  array $values
      */
-    public function __construct(array $values = null)
+    public function __construct(?array $values = null)
     {
         if (null === $values) {
             $values = [];

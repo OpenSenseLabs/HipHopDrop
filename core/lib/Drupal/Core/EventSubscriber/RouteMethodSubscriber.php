@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -35,7 +35,7 @@ class RouteMethodSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     // Set a higher priority to ensure that routes get the default HTTP methods
     // as early as possible.
     $events[RoutingEvents::ALTER][] = array('onRouteBuilding', 5000);

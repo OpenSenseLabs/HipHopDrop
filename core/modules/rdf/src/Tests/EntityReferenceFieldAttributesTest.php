@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\rdf\Tests;
 
@@ -77,7 +77,7 @@ class EntityReferenceFieldAttributesTest extends TaxonomyTestBase {
    * Ensure that file fields have the correct resource as the object in RDFa
    * when displayed as a teaser.
    */
-  function testNodeTeaser() {
+  public function testNodeTeaser() {
     // Set the teaser display to show this field.
     entity_get_display('node', 'article', 'teaser')
       ->setComponent($this->fieldName, array('type' => 'entity_reference_label'))

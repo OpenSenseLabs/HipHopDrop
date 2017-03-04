@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -61,7 +61,7 @@ class EasyRdf_Resource
      */
     public function __construct($uri, $graph = null)
     {
-        if (!is_string($uri) or $uri == null or $uri == '') {
+        if (!is_string($uri) || $uri == null || $uri == '') {
             throw new InvalidArgumentException(
                 "\$uri should be a string and cannot be null or empty"
             );
@@ -70,7 +70,7 @@ class EasyRdf_Resource
         $this->uri = $uri;
 
         # Check that $graph is an EasyRdf_Graph object
-        if (is_object($graph) and $graph instanceof EasyRdf_Graph) {
+        if (is_object($graph) && $graph instanceof EasyRdf_Graph) {
             $this->graph = $graph;
         } elseif (!is_null($graph)) {
             throw new InvalidArgumentException(

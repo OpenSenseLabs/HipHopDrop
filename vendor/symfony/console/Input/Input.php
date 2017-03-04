@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -40,7 +40,7 @@ abstract class Input implements InputInterface
      *
      * @param InputDefinition|null $definition A InputDefinition instance
      */
-    public function __construct(InputDefinition $definition = null)
+    public function __construct(?InputDefinition $definition = null)
     {
         if (null === $definition) {
             $this->definition = new InputDefinition();

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\dblog\Tests;
 
@@ -17,7 +17,7 @@ class ConnectionFailureTest extends WebTestBase {
   /**
    * Tests logging of connection failures.
    */
-  function testConnectionFailureLogging() {
+  public function testConnectionFailureLogging() {
     $logger = \Drupal::service('logger.factory');
 
     // MySQL errors like "1153 - Got a packet bigger than 'max_allowed_packet'

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\image\Plugin\migrate\process\d6;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\batch_test\Controller;
 
@@ -95,7 +95,7 @@ class BatchTestController {
    * @return array
    *   Render array containing markup.
    */
-  function testProgrammatic($value = 1) {
+  public function testProgrammatic($value = 1) {
     $form_state = (new FormState())->setValues([
       'value' => $value,
     ]);

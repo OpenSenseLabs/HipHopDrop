@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\entity_test\Entity;
 use Drupal\Core\Field\BaseFieldDefinition;

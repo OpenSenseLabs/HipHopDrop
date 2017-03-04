@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\content_translation\Tests;
 
@@ -21,7 +21,7 @@ class ContentTranslationUISkipTest extends WebTestBase {
   /**
    * Tests the content_translation_ui_skip key functionality.
    */
-  function testUICheckSkip() {
+  public function testUICheckSkip() {
     $admin_user = $this->drupalCreateUser(array(
       'translate any entity',
       'administer content translation',

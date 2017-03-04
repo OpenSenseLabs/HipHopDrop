@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\field_test\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldDefinitionInterface;

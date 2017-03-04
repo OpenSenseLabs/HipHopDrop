@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Zend Framework (http://framework.zend.com/)
  *

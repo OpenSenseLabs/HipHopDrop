@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -156,7 +156,7 @@ abstract class AbstractCallback implements CallbackInterface
     public function getHttpResponse()
     {
         if ($this->httpResponse === null) {
-            $this->httpResponse = new HttpResponse;
+            $this->httpResponse = new HttpResponse();
         }
         return $this->httpResponse;
     }

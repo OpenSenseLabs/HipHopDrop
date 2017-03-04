@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\module_install_class_loader_test1;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\httpkernel_test\HttpKernel;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Tests\action\Functional;
 
@@ -24,7 +24,7 @@ class ConfigurationTest extends BrowserTestBase {
   /**
    * Tests configuration of advanced actions through administration interface.
    */
-  function testActionConfiguration() {
+  public function testActionConfiguration() {
     // Create a user with permission to view the actions administration pages.
     $user = $this->drupalCreateUser(array('administer actions'));
     $this->drupalLogin($user);

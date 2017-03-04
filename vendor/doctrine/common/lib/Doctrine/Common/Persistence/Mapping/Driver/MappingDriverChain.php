@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -121,14 +121,14 @@ class MappingDriverChain implements MappingDriver
         $driverClasses = array();
 
         /* @var $driver MappingDriver */
-        foreach ($this->drivers AS $namespace => $driver) {
+        foreach ($this->drivers as $namespace => $driver) {
             $oid = spl_object_hash($driver);
 
             if (!isset($driverClasses[$oid])) {
                 $driverClasses[$oid] = $driver->getAllClassNames();
             }
 
-            foreach ($driverClasses[$oid] AS $className) {
+            foreach ($driverClasses[$oid] as $className) {
                 if (strpos($className, $namespace) === 0) {
                     $classNames[$className] = true;
                 }
@@ -150,7 +150,7 @@ class MappingDriverChain implements MappingDriver
     public function isTransient($className)
     {
         /* @var $driver MappingDriver */
-        foreach ($this->drivers AS $namespace => $driver) {
+        foreach ($this->drivers as $namespace => $driver) {
             if (strpos($className, $namespace) === 0) {
                 return $driver->isTransient($className);
             }

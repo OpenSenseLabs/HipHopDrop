@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Component\Diff\Engine;
 

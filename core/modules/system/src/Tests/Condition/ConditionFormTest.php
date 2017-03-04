@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Condition;
 
@@ -21,7 +21,7 @@ class ConditionFormTest extends WebTestBase {
   /**
    * Submit the condition_node_type_test_form to test condition forms.
    */
-  function testConfigForm() {
+  public function testConfigForm() {
     $this->drupalCreateContentType(array('type' => 'page', 'name' => 'Page'));
     $this->drupalCreateContentType(array('type' => 'article', 'name' => 'Article'));
 

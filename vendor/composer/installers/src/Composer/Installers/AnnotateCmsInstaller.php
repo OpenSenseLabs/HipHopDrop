@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Composer\Installers;
 
 class AnnotateCmsInstaller extends BaseInstaller

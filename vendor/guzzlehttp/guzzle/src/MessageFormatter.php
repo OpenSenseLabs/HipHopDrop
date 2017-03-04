@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp;
 
 use Psr\Http\Message\MessageInterface;
@@ -66,8 +66,8 @@ class MessageFormatter
      */
     public function format(
         RequestInterface $request,
-        ResponseInterface $response = null,
-        \Exception $error = null
+        ?ResponseInterface $response = null,
+        ?\Exception $error = null
     ) {
         $cache = [];
 

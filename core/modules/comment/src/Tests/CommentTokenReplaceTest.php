@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\comment\Tests;
 
@@ -29,7 +29,7 @@ class CommentTokenReplaceTest extends CommentTestBase {
   /**
    * Creates a comment, then tests the tokens generated from it.
    */
-  function testCommentTokenReplacement() {
+  public function testCommentTokenReplacement() {
     $token_service = \Drupal::token();
     $language_interface = \Drupal::languageManager()->getCurrentLanguage();
     $url_options = array(

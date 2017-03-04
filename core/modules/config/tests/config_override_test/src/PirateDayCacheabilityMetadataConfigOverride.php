@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\config_override_test;
 

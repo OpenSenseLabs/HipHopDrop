@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\system\Tests\Menu;
 
@@ -58,7 +58,7 @@ class BreadcrumbTest extends MenuTestBase {
   /**
    * Tests breadcrumbs on node and administrative paths.
    */
-  function testBreadCrumbs() {
+  public function testBreadCrumbs() {
     // Prepare common base breadcrumb elements.
     $home = array('' => 'Home');
     $admin = $home + array('admin' => t('Administration'));

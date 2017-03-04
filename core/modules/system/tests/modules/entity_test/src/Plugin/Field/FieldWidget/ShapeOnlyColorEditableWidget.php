@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\entity_test\Plugin\Field\FieldWidget;
 

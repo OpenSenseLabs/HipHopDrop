@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views;
 
@@ -115,7 +115,7 @@ class Analyzer {
    * @return array
    *   A single formatted message, consisting of a key message and a key type.
    */
-  static function formatMessage($message, $type = 'error') {
+  public static function formatMessage($message, $type = 'error') {
     return array('message' => $message, 'type' => $type);
   }
 

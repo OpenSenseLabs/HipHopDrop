@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -306,7 +306,7 @@ class Atom extends Renderer\AbstractRenderer implements Renderer\RendererInterfa
             } elseif ((strlen($date) == 10) && ($d6 < strtotime("now"))) {
                 $dvalid = true;
             }
-            $validator = new Validator\EmailAddress;
+            $validator = new Validator\EmailAddress();
             if ($validator->isValid($matches['name'])) {
                 $nvalid = true;
             } else {
@@ -359,7 +359,7 @@ class Atom extends Renderer\AbstractRenderer implements Renderer\RendererInterfa
     protected function _loadXhtml($content)
     {
         if (class_exists('tidy', false)) {
-            $tidy = new \tidy;
+            $tidy = new \tidy();
             $config = [
                 'output-xhtml' => true,
                 'show-body-only' => true,

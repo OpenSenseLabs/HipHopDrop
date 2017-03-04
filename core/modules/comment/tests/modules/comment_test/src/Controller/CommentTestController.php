@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment_test\Controller;
 

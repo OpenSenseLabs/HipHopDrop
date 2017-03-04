@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Render\Element;
 
@@ -16,7 +16,7 @@ class TableSortExtenderTest extends KernelTestBase {
   /**
    * Tests tablesort_init().
    */
-  function testTableSortInit() {
+  public function testTableSortInit() {
 
     // Test simple table headers.
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -41,7 +41,7 @@ class RouteCollectionBuilder
     /**
      * @param LoaderInterface $loader
      */
-    public function __construct(LoaderInterface $loader = null)
+    public function __construct(?LoaderInterface $loader = null)
     {
         $this->loader = $loader;
     }

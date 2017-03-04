@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Core\Entity\Query\Sql;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Tests\TestSuites;
 use Drupal\simpletest\TestDiscovery;

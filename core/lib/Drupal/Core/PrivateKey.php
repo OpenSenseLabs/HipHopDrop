@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core;
 
@@ -23,7 +23,7 @@ class PrivateKey {
    * @param \Drupal\Core\State\StateInterface $state
    *   The state service.
    */
-  function __construct(StateInterface $state) {
+  public function __construct(StateInterface $state) {
     $this->state = $state;
   }
 

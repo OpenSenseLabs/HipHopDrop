@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -66,17 +66,17 @@ class EasyRdf_Serialiser
      */
     protected function checkSerialiseParams(&$graph, &$format)
     {
-        if (is_null($graph) or !is_object($graph) or !($graph instanceof EasyRdf_Graph)) {
+        if (is_null($graph) || !is_object($graph) || !($graph instanceof EasyRdf_Graph)) {
             throw new InvalidArgumentException(
                 "\$graph should be an EasyRdf_Graph object and cannot be null"
             );
         }
 
-        if (is_null($format) or $format == '') {
+        if (is_null($format) || $format == '') {
             throw new InvalidArgumentException(
                 "\$format cannot be null or empty"
             );
-        } elseif (is_object($format) and ($format instanceof EasyRdf_Format)) {
+        } elseif (is_object($format) && ($format instanceof EasyRdf_Format)) {
             $format = $format->getName();
         } elseif (!is_string($format)) {
             throw new InvalidArgumentException(

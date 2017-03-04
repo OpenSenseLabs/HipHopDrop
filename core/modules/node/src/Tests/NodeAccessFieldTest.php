@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 use Drupal\Component\Utility\Unicode;
@@ -72,7 +72,7 @@ class NodeAccessFieldTest extends NodeTestBase {
   /**
    * Tests administering fields when node access is restricted.
    */
-  function testNodeAccessAdministerField() {
+  public function testNodeAccessAdministerField() {
     // Create a page node.
     $fieldData = array();
     $value = $fieldData[0]['value'] = $this->randomMachineName();

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace Composer\Installers;
 
 use Composer\Installer\LibraryInstaller;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\editor\Tests\Update;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 if (file_exists($file = __DIR__.'/../vendor/autoload.php')) {
     $loader = require_once $file;

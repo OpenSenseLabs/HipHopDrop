@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\user\Tests;
 
@@ -19,7 +19,7 @@ class UserSearchTest extends WebTestBase {
    */
   public static $modules = array('search');
 
-  function testUserSearch() {
+  public function testUserSearch() {
     // Verify that a user without 'administer users' permission cannot search
     // for users by email address. Additionally, ensure that the username has a
     // plus sign to ensure searching works with that.

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -86,7 +86,7 @@ class PubSubHubbub
     public static function getHttpClient()
     {
         if (!isset(static::$httpClient)) {
-            static::$httpClient = new Http\Client;
+            static::$httpClient = new Http\Client();
         } else {
             static::$httpClient->resetParameters();
         }
@@ -111,7 +111,7 @@ class PubSubHubbub
      *
      * @param  null|Escaper $escaper
      */
-    public static function setEscaper(Escaper $escaper = null)
+    public static function setEscaper(?Escaper $escaper = null)
     {
         static::$escaper = $escaper;
     }

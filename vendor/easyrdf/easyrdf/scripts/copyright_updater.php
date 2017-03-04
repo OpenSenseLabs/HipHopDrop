@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 $ROOT = realpath(__DIR__ . '/..');
 
@@ -12,7 +12,7 @@ function process_file($path) {
         if (preg_match("/^(.+)Copyright\s+\(c\)\s+(\d+)-?(\d*) (Nicholas.+)$/", $line, $m)) {
             $copy_statements++;
             
-            if ($m[2] != $year and $m[3] != $year) {
+            if ($m[2] != $year && $m[3] != $year) {
                 // Change the line
                 $line = "$m[1]Copyright (c) $m[2]-$year $m[4]";
             }

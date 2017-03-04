@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\Core\PathProcessor;
 
@@ -90,7 +90,7 @@ class PathProcessorTest extends UnitTestCase {
   /**
    * Tests resolving the inbound path to the system path.
    */
-  function testProcessInbound() {
+  public function testProcessInbound() {
 
     // Create an alias manager stub.
     $alias_manager = $this->getMockBuilder('Drupal\Core\Path\AliasManager')

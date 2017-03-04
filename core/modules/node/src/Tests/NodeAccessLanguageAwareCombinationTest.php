@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -192,7 +192,7 @@ class NodeAccessLanguageAwareCombinationTest extends NodeTestBase {
   /**
    * Tests node access and node access queries with multiple node languages.
    */
-  function testNodeAccessLanguageAwareCombination() {
+  public function testNodeAccessLanguageAwareCombination() {
 
     $expected_node_access = array('view' => TRUE, 'update' => FALSE, 'delete' => FALSE);
     $expected_node_access_no_access = array('view' => FALSE, 'update' => FALSE, 'delete' => FALSE);

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Database\Driver\mysql\Install;
 
@@ -140,7 +140,7 @@ class Tasks extends InstallTasks {
   /**
    * Ensure that InnoDB is available.
    */
-  function ensureInnoDbAvailable() {
+  public function ensureInnoDbAvailable() {
     $engines = Database::getConnection()->query('SHOW ENGINES')->fetchAllKeyed();
     if (isset($engines['MyISAM']) && $engines['MyISAM'] == 'DEFAULT' && !isset($engines['InnoDB'])) {
       $this->fail(t('The MyISAM storage engine is not supported.'));

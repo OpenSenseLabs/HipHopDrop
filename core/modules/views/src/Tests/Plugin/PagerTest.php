@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Tests\Plugin;
 
@@ -285,7 +285,7 @@ class PagerTest extends PluginTestBase {
   /**
    * Test the api functions on the view object.
    */
-  function testPagerApi() {
+  public function testPagerApi() {
     $view = Views::getView('test_pager_full');
     $view->setDisplay();
     // On the first round don't initialize the pager.

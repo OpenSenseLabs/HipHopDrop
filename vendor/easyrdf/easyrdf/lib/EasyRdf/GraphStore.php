@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -116,7 +116,7 @@ class EasyRdf_GraphStore
      */
     protected function sendGraph($method, $graph, $uriRef, $format)
     {
-        if (is_object($graph) and $graph instanceof EasyRdf_Graph) {
+        if (is_object($graph) && $graph instanceof EasyRdf_Graph) {
             if ($uriRef === null) {
                 $uriRef = $graph->getUri();
             }

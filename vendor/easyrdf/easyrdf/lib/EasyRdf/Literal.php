@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -90,8 +90,8 @@ class EasyRdf_Literal
             $value = isset($value['value']) ? $value['value'] : null;
         }
 
-        if (is_null($datatype) or $datatype === '') {
-            if (is_null($lang) or $lang === '') {
+        if (is_null($datatype) || $datatype === '') {
+            if (is_null($lang) || $lang === '') {
                 // Automatic datatype selection
                 $datatype = self::getDatatypeForValue($value);
             }
@@ -127,13 +127,13 @@ class EasyRdf_Literal
      */
     public static function setDatatypeMapping($datatype, $class)
     {
-        if (!is_string($datatype) or $datatype == null or $datatype == '') {
+        if (!is_string($datatype) || $datatype == null || $datatype == '') {
             throw new InvalidArgumentException(
                 "\$datatype should be a string and cannot be null or empty"
             );
         }
 
-        if (!is_string($class) or $class == null or $class == '') {
+        if (!is_string($class) || $class == null || $class == '') {
             throw new InvalidArgumentException(
                 "\$class should be a string and cannot be null or empty"
             );
@@ -150,7 +150,7 @@ class EasyRdf_Literal
      */
     public static function deleteDatatypeMapping($datatype)
     {
-        if (!is_string($datatype) or $datatype == null or $datatype == '') {
+        if (!is_string($datatype) || $datatype == null || $datatype == '') {
             throw new InvalidArgumentException(
                 "\$datatype should be a string and cannot be null or empty"
             );
@@ -181,7 +181,7 @@ class EasyRdf_Literal
             return 'http://www.w3.org/2001/XMLSchema#integer';
         } elseif (is_bool($value)) {
             return 'http://www.w3.org/2001/XMLSchema#boolean';
-        } elseif (is_object($value) and $value instanceof DateTime) {
+        } elseif (is_object($value) && $value instanceof DateTime) {
             return 'http://www.w3.org/2001/XMLSchema#dateTime';
         } else {
             return null;

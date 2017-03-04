@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search\Tests;
 
@@ -41,7 +41,7 @@ class SearchKeywordsConditionsTest extends SearchTestBase {
   /**
    * Verify the keywords are captured and conditions respected.
    */
-  function testSearchKeywordsConditions() {
+  public function testSearchKeywordsConditions() {
     // No keys, not conditions - no results.
     $this->drupalGet('search/dummy_path');
     $this->assertNoText('Dummy search snippet to display');

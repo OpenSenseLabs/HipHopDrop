@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -42,7 +42,7 @@ class ClassMetadataFactory implements ClassMetadataFactoryInterface
      * @param LoaderInterface $loader
      * @param Cache|null      $cache
      */
-    public function __construct(LoaderInterface $loader, Cache $cache = null)
+    public function __construct(LoaderInterface $loader, ?Cache $cache = null)
     {
         $this->loader = $loader;
         $this->cache = $cache;

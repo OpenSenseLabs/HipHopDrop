@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * @file
  * This contains HTML5 entities to use with serializing.

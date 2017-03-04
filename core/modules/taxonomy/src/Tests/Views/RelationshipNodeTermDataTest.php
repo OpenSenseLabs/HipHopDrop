@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests\Views;
 
@@ -18,7 +18,7 @@ class RelationshipNodeTermDataTest extends TaxonomyTestBase {
    */
   public static $testViews = array('test_taxonomy_node_term_data');
 
-  function testViewsHandlerRelationshipNodeTermData() {
+  public function testViewsHandlerRelationshipNodeTermData() {
     $view = Views::getView('test_taxonomy_node_term_data');
     // Tests \Drupal\taxonomy\Plugin\views\relationship\NodeTermData::calculateDependencies().
     $expected = [

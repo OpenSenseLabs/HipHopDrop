@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\router_test;
 

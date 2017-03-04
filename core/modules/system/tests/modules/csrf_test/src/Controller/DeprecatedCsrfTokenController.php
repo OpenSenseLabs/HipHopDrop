@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\csrf_test\Controller;
 

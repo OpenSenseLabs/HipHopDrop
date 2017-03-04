@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\early_translation_test;
 

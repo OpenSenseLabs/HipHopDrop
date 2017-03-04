@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -19,7 +19,7 @@ class NodeEntityViewModeAlterTest extends NodeTestBase {
   /**
    * Create a "Basic page" node and verify its consistency in the database.
    */
-  function testNodeViewModeChange() {
+  public function testNodeViewModeChange() {
     $web_user = $this->drupalCreateUser(array('create page content', 'edit own page content'));
     $this->drupalLogin($web_user);
 

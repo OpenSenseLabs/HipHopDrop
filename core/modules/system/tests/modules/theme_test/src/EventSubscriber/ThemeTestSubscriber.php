@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\theme_test\EventSubscriber;
 
@@ -91,7 +91,7 @@ class ThemeTestSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::REQUEST][] = array('onRequest');
     $events[KernelEvents::VIEW][] = array('onView', -1000);
     return $events;

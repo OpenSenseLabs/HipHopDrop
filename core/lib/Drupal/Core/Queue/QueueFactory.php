@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Queue;
 
@@ -31,7 +31,7 @@ class QueueFactory implements ContainerAwareInterface {
   /**
    * Constructs a queue factory.
    */
-  function __construct(Settings $settings) {
+  public function __construct(Settings $settings) {
     $this->settings = $settings;
   }
 

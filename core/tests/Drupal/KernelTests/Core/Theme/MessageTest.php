@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Theme;
 
@@ -19,7 +19,7 @@ class MessageTest extends KernelTestBase {
   /**
    * Tests setting messages output.
    */
-  function testMessages() {
+  public function testMessages() {
     // Enable the Classy theme.
     \Drupal::service('theme_handler')->install(['classy']);
     \Drupal::service('theme_handler')->setDefault('classy');

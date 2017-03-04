@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\migrate_entity_test\Entity;
 

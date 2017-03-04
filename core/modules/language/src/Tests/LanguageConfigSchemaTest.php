@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\language\Tests;
 
@@ -42,7 +42,7 @@ class LanguageConfigSchemaTest extends WebTestBase {
   /**
    * Tests whether the language config schema is valid.
    */
-  function testValidLanguageConfigSchema() {
+  public function testValidLanguageConfigSchema() {
     // Make sure no language configuration available by default.
     $config_data = $this->config('language.settings')->get();
     $this->assertTrue(empty($config_data));

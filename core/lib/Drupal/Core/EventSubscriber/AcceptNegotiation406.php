@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -36,7 +36,7 @@ class AcceptNegotiation406 implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::VIEW][] = ['onViewDetect406', -10];
 
     return $events;

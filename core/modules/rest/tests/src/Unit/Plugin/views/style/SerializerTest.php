@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\rest\Unit\Plugin\views\style;
 

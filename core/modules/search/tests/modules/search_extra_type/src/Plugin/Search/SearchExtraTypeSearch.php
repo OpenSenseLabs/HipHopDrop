@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\search_extra_type\Plugin\Search;
 

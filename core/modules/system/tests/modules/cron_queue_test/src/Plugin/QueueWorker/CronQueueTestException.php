@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\cron_queue_test\Plugin\QueueWorker;
 

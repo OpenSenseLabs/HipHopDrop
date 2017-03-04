@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\language\Tests;
 
@@ -17,7 +17,7 @@ class LanguageBrowserDetectionTest extends WebTestBase {
    * Tests for adding, editing and deleting mappings between browser language
    * codes and Drupal language codes.
    */
-  function testUIBrowserLanguageMappings() {
+  public function testUIBrowserLanguageMappings() {
     // User to manage languages.
     $admin_user = $this->drupalCreateUser(array('administer languages', 'access administration pages'));
     $this->drupalLogin($admin_user);

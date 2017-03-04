@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\editor\Tests;
 
@@ -36,7 +36,7 @@ class EditorPrivateFileReferenceFilterTest extends BrowserTestBase {
   /**
    * Tests the editor file reference filter with private files.
    */
-  function testEditorPrivateFileReferenceFilter() {
+  public function testEditorPrivateFileReferenceFilter() {
     $author = $this->drupalCreateUser();
     $this->drupalLogin($author);
 

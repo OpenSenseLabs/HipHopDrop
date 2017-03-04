@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\editor\Plugin\InPlaceEditor;
 
@@ -43,7 +43,7 @@ class Editor extends PluginBase implements InPlaceEditorInterface {
   /**
    * {@inheritdoc}
    */
-  function getMetadata(FieldItemListInterface $items) {
+  public function getMetadata(FieldItemListInterface $items) {
     $format_id = $items[0]->format;
     $metadata['format'] = $format_id;
     $metadata['formatHasTransformations'] = $this->textFormatHasTransformationFilters($format_id);

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Render;
 
@@ -21,7 +21,7 @@ class RenderTest extends KernelTestBase {
   /**
    * Tests theme preprocess functions being able to attach assets.
    */
-  function testDrupalRenderThemePreprocessAttached() {
+  public function testDrupalRenderThemePreprocessAttached() {
     \Drupal::state()->set('theme_preprocess_attached_test', TRUE);
 
     $test_element = [

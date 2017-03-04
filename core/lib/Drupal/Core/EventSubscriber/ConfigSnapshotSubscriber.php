@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -64,7 +64,7 @@ class ConfigSnapshotSubscriber implements EventSubscriberInterface {
    * @return array
    *   An array of event listener definitions.
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::IMPORT][] = array('onConfigImporterImport', 40);
     return $events;
   }

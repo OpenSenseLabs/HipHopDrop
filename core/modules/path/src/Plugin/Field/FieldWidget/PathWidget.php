@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\path\Plugin\Field\FieldWidget;
 

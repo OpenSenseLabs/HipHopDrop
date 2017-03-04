@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Database;
 
@@ -24,7 +24,7 @@ class SchemaTest extends KernelTestBase {
   /**
    * Tests database interactions.
    */
-  function testSchema() {
+  public function testSchema() {
     // Try creating a table.
     $table_specification = array(
       'description' => 'Schema table description may contain "quotes" and could be long—very long indeed.',
@@ -240,7 +240,7 @@ class SchemaTest extends KernelTestBase {
    *
    * @see \Drupal\Core\Database\Driver\mysql\Schema::getNormalizedIndexes()
    */
-  function testIndexLength() {
+  public function testIndexLength() {
     if (Database::getConnection()->databaseType() != 'mysql') {
       return;
     }
@@ -379,7 +379,7 @@ class SchemaTest extends KernelTestBase {
    * @return
    *   TRUE if the insert succeeded, FALSE otherwise.
    */
-  function tryInsert($table = 'test_table') {
+  public function tryInsert($table = 'test_table') {
     try {
       db_insert($table)
         ->fields(array('id' => mt_rand(10, 20)))
@@ -401,7 +401,7 @@ class SchemaTest extends KernelTestBase {
    * @param $column
    *   Optional column to test.
    */
-  function checkSchemaComment($description, $table, $column = NULL) {
+  public function checkSchemaComment($description, $table, $column = NULL) {
     if (method_exists(Database::getConnection()->schema(), 'getComment')) {
       $comment = Database::getConnection()->schema()->getComment($table, $column);
       // The schema comment truncation for mysql is different.
@@ -416,7 +416,7 @@ class SchemaTest extends KernelTestBase {
   /**
    * Tests creating unsigned columns and data integrity thereof.
    */
-  function testUnsignedColumns() {
+  public function testUnsignedColumns() {
     // First create the table with just a serial column.
     $table_name = 'unsigned_table';
     $table_spec = array(
@@ -455,7 +455,7 @@ class SchemaTest extends KernelTestBase {
    * @return
    *   TRUE if the insert succeeded, FALSE otherwise.
    */
-  function tryUnsignedInsert($table_name, $column_name) {
+  public function tryUnsignedInsert($table_name, $column_name) {
     try {
       db_insert($table_name)
         ->fields(array($column_name => -1))
@@ -470,7 +470,7 @@ class SchemaTest extends KernelTestBase {
   /**
    * Tests adding columns to an existing table.
    */
-  function testSchemaAddField() {
+  public function testSchemaAddField() {
     // Test varchar types.
     foreach (array(1, 32, 128, 256, 512) as $length) {
       $base_field_spec = array(
@@ -653,7 +653,7 @@ class SchemaTest extends KernelTestBase {
   /**
    * Tests changing columns between types.
    */
-  function testSchemaChangeField() {
+  public function testSchemaChangeField() {
     $field_specs = array(
       array('type' => 'int', 'size' => 'normal', 'not null' => FALSE),
       array('type' => 'int', 'size' => 'normal', 'not null' => TRUE, 'initial' => 1, 'default' => 17),

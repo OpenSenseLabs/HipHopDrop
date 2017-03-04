@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\config_collection_install_test;
 
@@ -42,7 +42,7 @@ class EventSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::COLLECTION_INFO][] = array('addCollections');
     return $events;
   }

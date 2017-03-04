@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\file_test\StreamWrapper;
 
@@ -27,7 +27,7 @@ class DummyRemoteStreamWrapper extends PublicStream {
     return t('Dummy wrapper for simpletest (remote).');
   }
 
-  function realpath() {
+  public function realpath() {
     return FALSE;
   }
 

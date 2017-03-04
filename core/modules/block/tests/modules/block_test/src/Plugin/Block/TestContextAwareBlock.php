@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block_test\Plugin\Block;
 
@@ -28,7 +28,7 @@ class TestContextAwareBlock extends BlockBase {
     return array(
       '#prefix' => '<div id="' . $this->getPluginId() . '--username">',
       '#suffix' => '</div>',
-      '#markup' => $user ? $user->getUsername() : 'No context mapping selected.' ,
+      '#markup' => $user ? $user->getUsername() : 'No context mapping selected.',
     );
   }
 

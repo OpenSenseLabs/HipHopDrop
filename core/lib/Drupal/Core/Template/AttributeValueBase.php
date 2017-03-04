@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\Template;
 use Drupal\Component\Utility\Html;
@@ -65,6 +65,6 @@ abstract class AttributeValueBase {
   /**
    * Implements the magic __toString() method.
    */
-  abstract function __toString();
+  public abstract function __toString();
 
 }

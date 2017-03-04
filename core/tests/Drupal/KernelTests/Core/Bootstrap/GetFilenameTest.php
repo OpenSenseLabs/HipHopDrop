@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Bootstrap;
 
@@ -19,7 +19,7 @@ class GetFilenameTest extends KernelTestBase {
   /**
    * Tests that drupal_get_filename() works when the file is not in database.
    */
-  function testDrupalGetFilename() {
+  public function testDrupalGetFilename() {
     // drupal_get_profile() is using obtaining the profile from state if the
     // install_state global is not set.
     global $install_state;

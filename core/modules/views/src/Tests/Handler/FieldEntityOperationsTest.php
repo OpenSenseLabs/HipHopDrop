@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Tests\Handler;
 
@@ -27,7 +27,7 @@ class FieldEntityOperationsTest extends HandlerTestBase {
    */
   public static $modules = array('node', 'language', 'views_ui');
 
-  function setUp() {
+  public function setUp() {
     parent::setUp();
 
     // Create Article content type.

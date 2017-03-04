@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ckeditor_test\Plugin\Filter;
 

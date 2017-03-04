@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\datetime\Tests\Views;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItem;

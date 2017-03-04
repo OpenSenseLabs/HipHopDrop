@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\form_test\Form;
 
@@ -41,7 +41,7 @@ class FormTestFormStateValuesCleanAdvancedForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $form_state->cleanValues();
     print t('You WIN!');
-    exit;
+    exit(0);
   }
 
 }

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\service_provider_test;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\simpletest;
 
@@ -89,7 +89,7 @@ abstract class KernelTestBase extends TestBase {
   /**
    * {@inheritdoc}
    */
-  function __construct($test_id = NULL) {
+  public function __construct($test_id = NULL) {
     parent::__construct($test_id);
     $this->skipClasses[__CLASS__] = TRUE;
   }

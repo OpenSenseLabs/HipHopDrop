@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\big_pipe\Unit\Render;
 
@@ -38,7 +38,7 @@ class BigPipeResponseAttachmentsProcessorTest extends UnitTestCase {
     $big_pipe_response_attachments_processor->processAttachments($non_html_response);
   }
 
-  function nonHtmlResponseProvider() {
+  public function nonHtmlResponseProvider() {
     return [
       'AjaxResponse, which implements AttachmentsInterface' => [AjaxResponse::class],
       'A dummy that implements AttachmentsInterface' => [get_class($this->prophesize(AttachmentsInterface::class)->reveal())],

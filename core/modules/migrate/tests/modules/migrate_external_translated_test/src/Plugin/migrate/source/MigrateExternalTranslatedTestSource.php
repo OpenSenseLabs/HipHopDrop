@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\migrate_external_translated_test\Plugin\migrate\source;
 

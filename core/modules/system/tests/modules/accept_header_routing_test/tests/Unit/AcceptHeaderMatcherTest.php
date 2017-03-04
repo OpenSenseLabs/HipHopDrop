@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\accept_header_routing_teste\Unit\Routing;
 

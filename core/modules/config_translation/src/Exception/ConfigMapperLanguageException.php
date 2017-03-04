@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\config_translation\Exception;
 

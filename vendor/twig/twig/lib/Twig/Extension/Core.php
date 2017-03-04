@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 if (!defined('ENT_SUBSTITUTE')) {
     // use 0 as hhvm does not support several flags yet

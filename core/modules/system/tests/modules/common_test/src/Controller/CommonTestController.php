@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\common_test\Controller;
 

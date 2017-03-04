@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\simpletest\Tests;
 
@@ -14,7 +14,7 @@ class MailCaptureTest extends WebTestBase {
   /**
    * Test to see if the wrapper function is executed correctly.
    */
-  function testMailSend() {
+  public function testMailSend() {
     // Create an email.
     $subject = $this->randomString(64);
     $body = $this->randomString(128);

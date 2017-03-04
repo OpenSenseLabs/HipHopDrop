@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  *   Copyright (c) 2013 Ben Ramsey <http://benramsey.com>

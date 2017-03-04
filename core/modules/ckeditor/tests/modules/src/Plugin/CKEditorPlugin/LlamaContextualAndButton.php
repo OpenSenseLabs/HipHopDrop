@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ckeditor_test\Plugin\CKEditorPlugin;
 
@@ -22,7 +22,7 @@ class LlamaContextualAndButton extends Llama implements CKEditorPluginContextual
   /**
    * {@inheritdoc}
    */
-  function isEnabled(Editor $editor) {
+  public function isEnabled(Editor $editor) {
     // Automatically enable this plugin if the Strike button is enabled.
     $settings = $editor->getSettings();
     foreach ($settings['toolbar']['rows'] as $row) {
@@ -38,7 +38,7 @@ class LlamaContextualAndButton extends Llama implements CKEditorPluginContextual
   /**
    * {@inheritdoc}
    */
-  function getButtons() {
+  public function getButtons() {
     return array(
       'Llama' => array(
         'label' => t('Insert Llama'),
@@ -49,14 +49,14 @@ class LlamaContextualAndButton extends Llama implements CKEditorPluginContextual
   /**
    * {@inheritdoc}
    */
-  function getFile() {
+  public function getFile() {
     return drupal_get_path('module', 'ckeditor_test') . '/js/llama_contextual_and_button.js';
   }
 
   /**
    * {@inheritdoc}
    */
-  function settingsForm(array $form, FormStateInterface $form_state, Editor $editor) {
+  public function settingsForm(array $form, FormStateInterface $form_state, Editor $editor) {
     // Defaults.
     $config = array('ultra_llama_mode' => FALSE);
     $settings = $editor->getSettings();

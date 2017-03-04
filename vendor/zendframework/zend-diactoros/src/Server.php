@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -136,7 +136,7 @@ class Server
     public static function createServerFromRequest(
         callable $callback,
         ServerRequestInterface $request,
-        ResponseInterface $response = null
+        ?ResponseInterface $response = null
     ) {
         if (! $response) {
             $response = new Response();
@@ -156,7 +156,7 @@ class Server
      *
      * @param null|callable $finalHandler
      */
-    public function listen(callable $finalHandler = null)
+    public function listen(?callable $finalHandler = null)
     {
         $callback = $this->callback;
 

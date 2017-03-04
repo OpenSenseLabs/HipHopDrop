@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\twig_extension_test\TwigExtension;
 

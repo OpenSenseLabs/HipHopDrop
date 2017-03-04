@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -31,7 +31,7 @@ class ExceptionListener implements EventSubscriberInterface
     protected $controller;
     protected $logger;
 
-    public function __construct($controller, LoggerInterface $logger = null)
+    public function __construct($controller, ?LoggerInterface $logger = null)
     {
         $this->controller = $controller;
         $this->logger = $logger;

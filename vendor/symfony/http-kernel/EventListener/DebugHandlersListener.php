@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -45,7 +45,7 @@ class DebugHandlersListener implements EventSubscriberInterface
      * @param bool                 $scream           Enables/disables screaming mode, where even silenced errors are logged
      * @param string               $fileLinkFormat   The format for links to source files
      */
-    public function __construct($exceptionHandler, LoggerInterface $logger = null, $levels = null, $throwAt = -1, $scream = true, $fileLinkFormat = null)
+    public function __construct($exceptionHandler, ?LoggerInterface $logger = null, $levels = null, $throwAt = -1, $scream = true, $fileLinkFormat = null)
     {
         $this->exceptionHandler = $exceptionHandler;
         $this->logger = $logger;
@@ -60,7 +60,7 @@ class DebugHandlersListener implements EventSubscriberInterface
      *
      * @param Event|null $event The triggering event
      */
-    public function configure(Event $event = null)
+    public function configure(?Event $event = null)
     {
         if (!$this->firstCall) {
             return;

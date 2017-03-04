@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\comment\Plugin\Field\FieldType;
 

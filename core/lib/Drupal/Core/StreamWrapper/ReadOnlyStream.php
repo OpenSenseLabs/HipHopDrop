@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\StreamWrapper;
 
@@ -39,14 +39,14 @@ abstract class ReadOnlyStream implements StreamWrapperInterface {
   /**
    * {@inheritdoc}
    */
-  function setUri($uri) {
+  public function setUri($uri) {
     $this->uri = $uri;
   }
 
   /**
    * {@inheritdoc}
    */
-  function getUri() {
+  public function getUri() {
     return $this->uri;
   }
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -59,7 +59,7 @@ class AnnotationReader implements Reader
         'Required' => true,
         'Target' => true,
         // Widely used tags (but not existent in phpdoc)
-        'fix' => true , 'fixme' => true,
+        'fix' => true, 'fixme' => true,
         'override' => true,
         // PHPDocumentor 1 tags
         'abstract'=> true, 'access'=> true,
@@ -174,13 +174,13 @@ class AnnotationReader implements Reader
 
         AnnotationRegistry::registerFile(__DIR__ . '/Annotation/IgnoreAnnotation.php');
 
-        $this->parser    = new DocParser;
-        $this->preParser = new DocParser;
+        $this->parser    = new DocParser();
+        $this->preParser = new DocParser();
 
         $this->preParser->setImports(self::$globalImports);
         $this->preParser->setIgnoreNotImportedAnnotations(true);
 
-        $this->phpParser = new PhpParser;
+        $this->phpParser = new PhpParser();
     }
 
     /**
@@ -375,7 +375,7 @@ class AnnotationReader implements Reader
 
         foreach ($annotations as $annotation) {
             if ($annotation instanceof IgnoreAnnotation) {
-                foreach ($annotation->names AS $annot) {
+                foreach ($annotation->names as $annot) {
                     $ignoredAnnotationNames[$annot] = true;
                 }
             }

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\content_translation_test\Entity;
 

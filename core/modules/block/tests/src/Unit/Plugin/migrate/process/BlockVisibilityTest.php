@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\block\Unit\Plugin\migrate\process;
 

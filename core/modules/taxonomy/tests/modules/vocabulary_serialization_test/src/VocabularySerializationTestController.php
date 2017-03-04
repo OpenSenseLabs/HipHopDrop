@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\vocabulary_serialization_test;
 

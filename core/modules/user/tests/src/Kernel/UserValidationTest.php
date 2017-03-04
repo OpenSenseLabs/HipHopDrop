@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\user\Kernel;
 
@@ -39,7 +39,7 @@ class UserValidationTest extends KernelTestBase {
   /**
    * Tests user name validation.
    */
-  function testUsernames() {
+  public function testUsernames() {
     $test_cases = array( // '<username>' => array('<description>', 'assert<testName>'),
       'foo'                    => array('Valid username', 'assertNull'),
       'FOO'                    => array('Valid username', 'assertNull'),
@@ -69,7 +69,7 @@ class UserValidationTest extends KernelTestBase {
   /**
    * Runs entity validation checks.
    */
-  function testValidation() {
+  public function testValidation() {
     $user = User::create(array(
       'name' => 'test',
       'mail' => 'test@example.com',

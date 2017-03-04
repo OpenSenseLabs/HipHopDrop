@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\filter\Tests;
 
@@ -51,7 +51,7 @@ class FilterSecurityTest extends WebTestBase {
    * Tests that filtered content is emptied when an actively used filter module
    * is disabled.
    */
-  function testDisableFilterModule() {
+  public function testDisableFilterModule() {
     // Create a new node.
     $node = $this->drupalCreateNode(array('promote' => 1));
     $body_raw = $node->body->value;
@@ -81,7 +81,7 @@ class FilterSecurityTest extends WebTestBase {
   /**
    * Tests that security filters are enforced even when marked to be skipped.
    */
-  function testSkipSecurityFilters() {
+  public function testSkipSecurityFilters() {
     $text = "Text with some disallowed tags: <script />, <p><object>unicorn</object></p>, <i><table></i>.";
     $expected_filtered_text = "Text with some disallowed tags: , <p>unicorn</p>, .";
     $this->assertEqual(check_markup($text, 'filtered_html', '', array()), $expected_filtered_text, 'Expected filter result.');

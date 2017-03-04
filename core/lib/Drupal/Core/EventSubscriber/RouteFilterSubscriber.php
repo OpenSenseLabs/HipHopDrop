@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -42,7 +42,7 @@ class RouteFilterSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[RoutingEvents::ALTER][] = array('onRouteAlter', -300);
     return $events;
   }

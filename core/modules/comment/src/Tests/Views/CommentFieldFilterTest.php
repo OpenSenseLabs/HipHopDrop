@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment\Tests\Views;
 
@@ -31,7 +31,7 @@ class CommentFieldFilterTest extends CommentTestBase {
    */
   public $commentTitles = array();
 
-  function setUp() {
+  public function setUp() {
     parent::setUp();
     $this->drupalLogin($this->drupalCreateUser(['access comments']));
 

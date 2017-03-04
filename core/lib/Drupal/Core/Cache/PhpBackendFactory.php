@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\Cache;
 
@@ -30,7 +30,7 @@ class PhpBackendFactory implements CacheFactoryInterface {
    * @return \Drupal\Core\Cache\PhpBackend
    *   The cache backend object for the specified cache bin.
    */
-  function get($bin) {
+  public function get($bin) {
     return new PhpBackend($bin, $this->checksumProvider);
   }
 

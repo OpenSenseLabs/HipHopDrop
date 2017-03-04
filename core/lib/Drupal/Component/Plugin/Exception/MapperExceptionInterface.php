@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\Component\Plugin\Exception;
 

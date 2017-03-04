@@ -1,4 +1,4 @@
-<?php
+<?hh
     require_once "vendor/autoload.php";
 
     // Load some properties from the composer file

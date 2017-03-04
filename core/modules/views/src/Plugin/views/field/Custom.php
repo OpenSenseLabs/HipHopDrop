@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Plugin\views\field;
 

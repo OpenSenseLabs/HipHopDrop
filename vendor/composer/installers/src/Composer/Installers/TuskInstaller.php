@@ -1,4 +1,4 @@
-<?php
+<?hh
     namespace Composer\Installers;
     /**
      * Composer installer for 3rd party Tusk utilities

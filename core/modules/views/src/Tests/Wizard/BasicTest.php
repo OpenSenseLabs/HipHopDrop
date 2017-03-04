@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Tests\Wizard;
 
@@ -20,7 +20,7 @@ class BasicTest extends WizardTestBase {
     $this->drupalPlaceBlock('page_title_block');
   }
 
-  function testViewsWizardAndListing() {
+  public function testViewsWizardAndListing() {
     $this->drupalCreateContentType(array('type' => 'article'));
     $this->drupalCreateContentType(array('type' => 'page'));
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\content_moderation\Plugin\Field\FieldWidget;
 

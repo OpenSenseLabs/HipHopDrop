@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\render_attached_test\Plugin\Block;
 

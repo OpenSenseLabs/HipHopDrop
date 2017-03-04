@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\menu_test\Plugin\Menu\LocalTask;
 
@@ -12,14 +12,14 @@ class TestTasksSettingsSub1 extends LocalTaskDefault {
   /**
    * {@inheritdoc}
    */
-  function getTitle() {
+  public function getTitle() {
     return $this->t('Dynamic title for @class', array('@class' => 'TestTasksSettingsSub1'));
   }
 
   /**
    * {@inheritdoc}
    */
-  function getCacheTags() {
+  public function getCacheTags() {
     return ['kittens:ragdoll'];
   }
 

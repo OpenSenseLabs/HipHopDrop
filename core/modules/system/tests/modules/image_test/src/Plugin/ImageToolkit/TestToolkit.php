@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\image_test\Plugin\ImageToolkit;
 

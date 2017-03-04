@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace GuzzleHttp\Promise;
 
 /**
@@ -341,8 +341,8 @@ function settle($promises)
  */
 function each(
     $iterable,
-    callable $onFulfilled = null,
-    callable $onRejected = null
+    ?callable $onFulfilled = null,
+    ?callable $onRejected = null
 ) {
     return (new EachPromise($iterable, [
         'fulfilled' => $onFulfilled,
@@ -368,8 +368,8 @@ function each(
 function each_limit(
     $iterable,
     $concurrency,
-    callable $onFulfilled = null,
-    callable $onRejected = null
+    ?callable $onFulfilled = null,
+    ?callable $onRejected = null
 ) {
     return (new EachPromise($iterable, [
         'fulfilled'   => $onFulfilled,
@@ -392,7 +392,7 @@ function each_limit(
 function each_limit_all(
     $iterable,
     $concurrency,
-    callable $onFulfilled = null
+    ?callable $onFulfilled = null
 ) {
     return each_limit(
         $iterable,

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\minimal\Tests;
 
@@ -16,7 +16,7 @@ class MinimalTest extends WebTestBase {
   /**
    * Tests Minimal installation profile.
    */
-  function testMinimal() {
+  public function testMinimal() {
     $this->drupalGet('');
     // Check the login block is present.
     $this->assertLink(t('Create new account'));

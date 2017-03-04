@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Database;
 
@@ -18,7 +18,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch a record properly in default object mode.
    */
-  function testQueryFetchDefault() {
+  public function testQueryFetchDefault() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25));
     $this->assertTrue($result instanceof StatementInterface, 'Result set is a Drupal statement object.');
@@ -34,7 +34,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch a record to an object explicitly.
    */
-  function testQueryFetchObject() {
+  public function testQueryFetchObject() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25), array('fetch' => \PDO::FETCH_OBJ));
     foreach ($result as $record) {
@@ -49,7 +49,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch a record to an associative array explicitly.
    */
-  function testQueryFetchArray() {
+  public function testQueryFetchArray() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25), array('fetch' => \PDO::FETCH_ASSOC));
     foreach ($result as $record) {
@@ -67,7 +67,7 @@ class FetchTest extends DatabaseTestBase {
    *
    * @see \Drupal\system\Tests\Database\FakeRecord
    */
-  function testQueryFetchClass() {
+  public function testQueryFetchClass() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25), array('fetch' => 'Drupal\system\Tests\Database\FakeRecord'));
     foreach ($result as $record) {
@@ -83,7 +83,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch a record into an indexed array explicitly.
    */
-  function testQueryFetchNum() {
+  public function testQueryFetchNum() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25), array('fetch' => \PDO::FETCH_NUM));
     foreach ($result as $record) {
@@ -99,7 +99,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch a record into a doubly-keyed array explicitly.
    */
-  function testQueryFetchBoth() {
+  public function testQueryFetchBoth() {
     $records = array();
     $result = db_query('SELECT name FROM {test} WHERE age = :age', array(':age' => 25), array('fetch' => \PDO::FETCH_BOTH));
     foreach ($result as $record) {
@@ -129,7 +129,7 @@ class FetchTest extends DatabaseTestBase {
   /**
    * Confirms that we can fetch an entire column of a result set at once.
    */
-  function testQueryFetchCol() {
+  public function testQueryFetchCol() {
     $result = db_query('SELECT name FROM {test} WHERE age > :age', array(':age' => 25));
     $column = $result->fetchCol();
     $this->assertIdentical(count($column), 3, 'fetchCol() returns the right number of records.');

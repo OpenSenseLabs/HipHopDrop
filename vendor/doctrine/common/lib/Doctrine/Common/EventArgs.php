@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -59,7 +59,7 @@ class EventArgs
     public static function getEmptyInstance()
     {
         if ( ! self::$_emptyEventArgsInstance) {
-            self::$_emptyEventArgsInstance = new EventArgs;
+            self::$_emptyEventArgsInstance = new EventArgs();
         }
 
         return self::$_emptyEventArgsInstance;

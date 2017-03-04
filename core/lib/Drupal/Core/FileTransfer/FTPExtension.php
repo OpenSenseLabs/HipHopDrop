@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Core\FileTransfer;
 
@@ -101,7 +101,7 @@ class FTPExtension extends FTP implements ChmodInterface {
   /**
    * {@inheritdoc}
    */
-  function chmodJailed($path, $mode, $recursive) {
+  public function chmodJailed($path, $mode, $recursive) {
     if (!ftp_chmod($this->connection, $mode, $path)) {
       throw new FileTransferException("Unable to set permissions on %file", NULL, array('%file' => $path));
     }

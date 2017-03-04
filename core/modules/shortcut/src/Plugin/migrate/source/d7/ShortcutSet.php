@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\shortcut\Plugin\migrate\source\d7;
 

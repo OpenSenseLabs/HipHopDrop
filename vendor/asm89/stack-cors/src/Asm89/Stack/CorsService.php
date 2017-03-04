@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Asm89\Stack;
 

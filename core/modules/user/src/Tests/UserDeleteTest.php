@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\user\Tests;
 
@@ -15,7 +15,7 @@ class UserDeleteTest extends WebTestBase {
   /**
    * Test deleting multiple users.
    */
-  function testUserDeleteMultiple() {
+  public function testUserDeleteMultiple() {
     // Create a few users with permissions, so roles will be created.
     $user_a = $this->drupalCreateUser(array('access user profiles'));
     $user_b = $this->drupalCreateUser(array('access user profiles'));

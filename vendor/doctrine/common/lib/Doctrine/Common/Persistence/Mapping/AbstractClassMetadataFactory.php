@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -72,7 +72,7 @@ abstract class AbstractClassMetadataFactory implements ClassMetadataFactory
      *
      * @return void
      */
-    public function setCacheDriver(Cache $cacheDriver = null)
+    public function setCacheDriver(?Cache $cacheDriver = null)
     {
         $this->cacheDriver = $cacheDriver;
     }

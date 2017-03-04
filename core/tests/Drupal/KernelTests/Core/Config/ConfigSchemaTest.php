@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Config;
 
@@ -34,7 +34,7 @@ class ConfigSchemaTest extends KernelTestBase {
   /**
    * Tests the basic metadata retrieval layer.
    */
-  function testSchemaMapping() {
+  public function testSchemaMapping() {
     // Nonexistent configuration key will have Undefined as metadata.
     $this->assertIdentical(FALSE, \Drupal::service('config.typed')->hasConfigSchema('config_schema_test.no_such_key'));
     $definition = \Drupal::service('config.typed')->getDefinition('config_schema_test.no_such_key');
@@ -248,7 +248,7 @@ class ConfigSchemaTest extends KernelTestBase {
   /**
    * Tests metadata retrieval with several levels of %parent indirection.
    */
-  function testSchemaMappingWithParents() {
+  public function testSchemaMappingWithParents() {
     $config_data = \Drupal::service('config.typed')->get('config_schema_test.someschema.with_parents');
 
     // Test fetching parent one level up.
@@ -288,7 +288,7 @@ class ConfigSchemaTest extends KernelTestBase {
   /**
    * Tests metadata applied to configuration objects.
    */
-  function testSchemaData() {
+  public function testSchemaData() {
     // Try a simple property.
     $meta = \Drupal::service('config.typed')->get('system.site');
     $property = $meta->get('page')->get('front');
@@ -394,7 +394,7 @@ class ConfigSchemaTest extends KernelTestBase {
   /**
    * Tests fallback to a greedy wildcard.
    */
-  function testSchemaFallback() {
+  public function testSchemaFallback() {
     $definition = \Drupal::service('config.typed')->getDefinition('config_schema_test.wildcard_fallback.something');
     // This should be the schema of config_schema_test.wildcard_fallback.*.
     $expected = array();
@@ -423,7 +423,7 @@ class ConfigSchemaTest extends KernelTestBase {
    *
    * @see \Drupal\Core\Config\TypedConfigManager::getFallbackName()
    */
-  function testColonsInSchemaTypeDetermination() {
+  public function testColonsInSchemaTypeDetermination() {
     $tests = \Drupal::service('config.typed')->get('config_schema_test.plugin_types')->get('tests')->getElements();
     $definition = $tests[0]->getDataDefinition()->toArray();
     $this->assertEqual($definition['type'], 'test.plugin_types.boolean');

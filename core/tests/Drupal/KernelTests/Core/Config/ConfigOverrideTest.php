@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Config;
 
@@ -26,7 +26,7 @@ class ConfigOverrideTest extends KernelTestBase {
   /**
    * Tests configuration override.
    */
-  function testConfOverride() {
+  public function testConfOverride() {
     $expected_original_data = array(
       'foo' => 'bar',
       'baz' => NULL,

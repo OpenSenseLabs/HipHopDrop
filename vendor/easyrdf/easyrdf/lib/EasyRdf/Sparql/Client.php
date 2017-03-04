@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -232,7 +232,7 @@ class EasyRdf_Sparql_Client
         // Check for undefined prefixes
         $prefixes = '';
         foreach (EasyRdf_Namespace::namespaces() as $prefix => $uri) {
-            if (strpos($query, "$prefix:") !== false and
+            if (strpos($query, "$prefix:") !== false &&
                 strpos($query, "PREFIX $prefix:") === false) {
                 $prefixes .=  "PREFIX $prefix: <$uri>\n";
             }
@@ -297,7 +297,7 @@ class EasyRdf_Sparql_Client
     {
         if (is_string($data)) {
             return $data;
-        } elseif (is_object($data) and $data instanceof EasyRdf_Graph) {
+        } elseif (is_object($data) && $data instanceof EasyRdf_Graph) {
             # FIXME: insert Turtle when there is a way of seperateing out the prefixes
             return $data->serialise('ntriples');
         } else {

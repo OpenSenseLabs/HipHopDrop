@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\System;
 
@@ -39,7 +39,7 @@ class MainContentFallbackTest extends WebTestBase {
   /**
    * Test availability of main content: Drupal falls back to SimplePageVariant.
    */
-  function testMainContentFallback() {
+  public function testMainContentFallback() {
     $edit = array();
     // Uninstall the block module.
     $edit['uninstall[block]'] = 'block';

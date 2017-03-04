@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\url_alter_test;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\migrate_cckfield_plugin_manager_test\Plugin\migrate\cckfield;
 

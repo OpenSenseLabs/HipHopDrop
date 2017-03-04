@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\ajax_forms_test\Plugin\Block;
 

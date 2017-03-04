@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * @file
@@ -70,7 +70,7 @@ try {
 catch (HttpExceptionInterface $e) {
   $response = new Response('', $e->getStatusCode());
   $response->prepare($request)->send();
-  exit;
+  exit(0);
 }
 
 // We have to enable the user and system modules, even to check access and
@@ -161,7 +161,7 @@ if ($is_allowed) {
     // JavaScript-based batch processing), send it immediately.
     if ($content instanceof Response) {
       $content->send();
-      exit;
+      exit(0);
     }
   }
   else {
@@ -175,7 +175,7 @@ if ($is_allowed) {
       }
       catch (EnforcedResponseException $e) {
         $e->getResponse()->send();
-        exit;
+        exit(0);
       }
     }
   }

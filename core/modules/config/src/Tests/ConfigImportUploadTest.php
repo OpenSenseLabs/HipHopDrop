@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\config\Tests;
 
@@ -35,7 +35,7 @@ class ConfigImportUploadTest extends WebTestBase {
   /**
    * Tests importing configuration.
    */
-  function testImport() {
+  public function testImport() {
     // Verify access to the config upload form.
     $this->drupalGet('admin/config/development/configuration/full/import');
     $this->assertResponse(200);

@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace GuzzleHttp\Handler;
 
 use GuzzleHttp\Psr7\Response;

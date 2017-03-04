@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\taxonomy\Tests;
 
@@ -26,7 +26,7 @@ class TermEntityReferenceTest extends TaxonomyTestBase {
    * field to limit the target vocabulary to one of them, ensuring that
    * the restriction applies.
    */
-  function testSelectionTestVocabularyRestriction() {
+  public function testSelectionTestVocabularyRestriction() {
 
     // Create two vocabularies.
     $vocabulary = $this->createVocabulary();

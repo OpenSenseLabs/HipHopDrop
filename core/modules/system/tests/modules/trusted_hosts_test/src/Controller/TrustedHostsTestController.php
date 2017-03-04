@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\trusted_hosts_test\Controller;
 use Symfony\Component\HttpFoundation\Request;

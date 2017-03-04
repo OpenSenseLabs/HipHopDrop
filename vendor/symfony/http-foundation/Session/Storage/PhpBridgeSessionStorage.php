@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /*
  * This file is part of the Symfony package.
@@ -27,7 +27,7 @@ class PhpBridgeSessionStorage extends NativeSessionStorage
      * @param AbstractProxy|NativeSessionHandler|\SessionHandlerInterface|null $handler
      * @param MetadataBag                                                      $metaBag MetadataBag
      */
-    public function __construct($handler = null, MetadataBag $metaBag = null)
+    public function __construct($handler = null, ?MetadataBag $metaBag = null)
     {
         $this->setMetadataBag($metaBag);
         $this->setSaveHandler($handler);

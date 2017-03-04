@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace GuzzleHttp;
 
 use GuzzleHttp\Promise\PromisorInterface;

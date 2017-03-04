@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views_ui\Tests;
 use Drupal\Core\Menu\MenuTreeParameters;

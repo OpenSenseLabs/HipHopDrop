@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\file_module_test\Form;
 

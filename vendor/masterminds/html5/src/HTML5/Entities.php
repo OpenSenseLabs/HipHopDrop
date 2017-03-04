@@ -1,4 +1,4 @@
-<?php
+<?hh
 namespace Masterminds\HTML5;
 
 /**

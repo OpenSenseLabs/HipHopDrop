@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * @file
@@ -41,7 +41,7 @@ class ArgumentsResolverTest extends UnitTestCase {
 
     // Test an optional parameter with no provided value.
     $data[] = [
-      function($foo = 'foo') {}, [], [], [] , ['foo'],
+      function($foo = 'foo') {}, [], [], [], ['foo'],
     ];
 
     // Test an optional parameter with a provided value.

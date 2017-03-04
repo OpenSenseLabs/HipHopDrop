@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony CMF package.
@@ -62,7 +62,7 @@ class ChainRouter implements ChainRouterInterface, WarmableInterface
     /**
      * @param LoggerInterface $logger
      */
-    public function __construct(LoggerInterface $logger = null)
+    public function __construct(?LoggerInterface $logger = null)
     {
         $this->logger = $logger;
     }
@@ -169,7 +169,7 @@ class ChainRouter implements ChainRouterInterface, WarmableInterface
      *
      * @throws ResourceNotFoundException If no router matched.
      */
-    private function doMatch($pathinfo, Request $request = null)
+    private function doMatch($pathinfo, ?Request $request = null)
     {
         $methodNotAllowed = null;
 

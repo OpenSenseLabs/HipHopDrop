@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Config;
 
@@ -30,7 +30,7 @@ class ConfigLanguageOverrideTest extends KernelTestBase {
   /**
    * Tests locale override based on language.
    */
-  function testConfigLanguageOverride() {
+  public function testConfigLanguageOverride() {
     // The language module implements a config factory override object that
     // overrides configuration when the Language module is enabled. This test ensures that
     // English overrides work.

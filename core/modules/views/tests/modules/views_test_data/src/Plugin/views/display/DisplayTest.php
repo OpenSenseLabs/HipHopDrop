@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views_test_data\Plugin\views\display;
 

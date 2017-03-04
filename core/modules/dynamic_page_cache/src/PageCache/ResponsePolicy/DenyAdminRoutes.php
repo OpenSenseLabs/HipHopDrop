@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\dynamic_page_cache\PageCache\ResponsePolicy;
 

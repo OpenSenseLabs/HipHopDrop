@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Ajax;
 
@@ -32,7 +32,7 @@ class CommandsTest extends AjaxTestBase {
   /**
    * Tests the various Ajax Commands.
    */
-  function testAjaxCommands() {
+  public function testAjaxCommands() {
     $form_path = 'ajax_forms_test_ajax_commands_form';
     $web_user = $this->drupalCreateUser(array('access content'));
     $this->drupalLogin($web_user);

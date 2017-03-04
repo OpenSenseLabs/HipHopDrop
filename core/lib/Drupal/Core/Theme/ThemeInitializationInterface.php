@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Theme;
 use Drupal\Core\Extension\Extension;

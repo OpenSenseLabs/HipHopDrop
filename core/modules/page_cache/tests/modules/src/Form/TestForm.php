@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\page_cache_form_test\Form;
 

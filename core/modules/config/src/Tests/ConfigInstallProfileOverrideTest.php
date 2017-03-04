@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\config\Tests;
 
@@ -28,7 +28,7 @@ class ConfigInstallProfileOverrideTest extends WebTestBase {
   /**
    * Tests install profile config changes.
    */
-  function testInstallProfileConfigOverwrite() {
+  public function testInstallProfileConfigOverwrite() {
     $config_name = 'system.cron';
     // The expected configuration from the system module.
     $expected_original_data = array(

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Config;
 
@@ -44,7 +44,7 @@ abstract class ConfigFactoryOverrideBase implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[ConfigEvents::COLLECTION_INFO][] = array('addCollections');
     $events[ConfigEvents::SAVE][] = array('onConfigSave', 20);
     $events[ConfigEvents::DELETE][] = array('onConfigDelete', 20);

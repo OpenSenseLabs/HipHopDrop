@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\rdf\Kernel;
 
@@ -21,7 +21,7 @@ class RdfaAttributesTest extends KernelTestBase {
   /**
    * Test attribute creation for mappings which use 'property'.
    */
-  function testProperty() {
+  public function testProperty() {
     $properties = array('dc:title');
 
     $mapping = array('properties' => $properties);
@@ -33,7 +33,7 @@ class RdfaAttributesTest extends KernelTestBase {
   /**
    * Test attribute creation for mappings which use 'datatype'.
    */
-  function testDatatype() {
+  public function testDatatype() {
     $properties = array('foo:bar1');
     $datatype = 'foo:bar1type';
 
@@ -52,7 +52,7 @@ class RdfaAttributesTest extends KernelTestBase {
   /**
    * Test attribute creation for mappings which override human-readable content.
    */
-  function testDatatypeCallback() {
+  public function testDatatypeCallback() {
     $properties = array('dc:created');
     $datatype = 'xsd:dateTime';
 
@@ -77,7 +77,7 @@ class RdfaAttributesTest extends KernelTestBase {
   /**
    * Test attribute creation for mappings which use data converters.
    */
-  function testDatatypeCallbackWithConverter() {
+  public function testDatatypeCallbackWithConverter() {
     $properties = array('schema:interactionCount');
 
     $data = "23";
@@ -101,7 +101,7 @@ class RdfaAttributesTest extends KernelTestBase {
   /**
    * Test attribute creation for mappings which use 'rel'.
    */
-  function testRel() {
+  public function testRel() {
     $properties = array('sioc:has_creator', 'dc:creator');
 
     $mapping = array(

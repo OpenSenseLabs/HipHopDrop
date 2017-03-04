@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 /**
  * @file
@@ -982,7 +982,7 @@ function template_preprocess_table(&$variables) {
   $variables['header_columns'] = $header_columns;
 
   // Rows and footer have the same structure.
-  $sections = array('rows' , 'footer');
+  $sections = array('rows', 'footer');
   foreach ($sections as $section) {
     if (!empty($variables[$section])) {
       foreach ($variables[$section] as $row_key => $row) {

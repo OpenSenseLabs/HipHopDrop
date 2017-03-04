@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -81,7 +81,7 @@ class ClosureExpressionVisitor extends ExpressionVisitor
      *
      * @return \Closure
      */
-    public static function sortByField($name, $orientation = 1, \Closure $next = null)
+    public static function sortByField($name, $orientation = 1, ?\Closure $next = null)
     {
         if ( ! $next) {
             $next = function() {

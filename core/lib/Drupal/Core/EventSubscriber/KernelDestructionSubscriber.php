@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
@@ -58,7 +58,7 @@ class KernelDestructionSubscriber implements EventSubscriberInterface, Container
    * @return array
    *   An array of event listener definitions.
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[KernelEvents::TERMINATE][] = array('onKernelTerminate', 100);
     return $events;
   }

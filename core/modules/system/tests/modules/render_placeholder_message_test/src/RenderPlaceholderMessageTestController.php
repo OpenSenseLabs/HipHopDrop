@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\render_placeholder_message_test;
 use Drupal\Core\Render\RenderContext;

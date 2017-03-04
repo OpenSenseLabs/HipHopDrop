@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -122,7 +122,7 @@ final class AnnotationRegistry
      */
     static public function loadAnnotationClass($class)
     {
-        foreach (self::$autoloadNamespaces AS $namespace => $dirs) {
+        foreach (self::$autoloadNamespaces as $namespace => $dirs) {
             if (strpos($class, $namespace) === 0) {
                 $file = str_replace("\\", DIRECTORY_SEPARATOR, $class) . ".php";
                 if ($dirs === null) {
@@ -131,7 +131,7 @@ final class AnnotationRegistry
                         return true;
                     }
                 } else {
-                    foreach((array)$dirs AS $dir) {
+                    foreach((array)$dirs as $dir) {
                         if (is_file($dir . DIRECTORY_SEPARATOR . $file)) {
                             require $dir . DIRECTORY_SEPARATOR . $file;
                             return true;
@@ -141,7 +141,7 @@ final class AnnotationRegistry
             }
         }
 
-        foreach (self::$loaders AS $loader) {
+        foreach (self::$loaders as $loader) {
             if (call_user_func($loader, $class) === true) {
                 return true;
             }

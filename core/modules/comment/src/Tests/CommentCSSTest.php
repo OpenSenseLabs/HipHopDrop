@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment\Tests;
 
@@ -27,7 +27,7 @@ class CommentCSSTest extends CommentTestBase {
   /**
    * Tests CSS classes on comments.
    */
-  function testCommentClasses() {
+  public function testCommentClasses() {
     // Create all permutations for comments, users, and nodes.
     $parameters = array(
       'node_uid' => array(0, $this->webUser->id()),

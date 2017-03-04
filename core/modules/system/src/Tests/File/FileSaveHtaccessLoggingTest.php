@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\File;
 
@@ -17,7 +17,7 @@ class FileSaveHtaccessLoggingTest extends WebTestBase {
   /**
    * Tests file_save_htaccess().
    */
-  function testHtaccessSave() {
+  public function testHtaccessSave() {
     // Prepare test directories.
     $private = $this->publicFilesDirectory . '/test/private';
 

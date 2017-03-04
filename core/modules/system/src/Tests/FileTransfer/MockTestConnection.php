@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\FileTransfer;
 
@@ -10,11 +10,11 @@ class MockTestConnection {
   protected $commandsRun = array();
   public $connectionString;
 
-  function run($cmd) {
+  public function run($cmd) {
     $this->commandsRun[] = $cmd;
   }
 
-  function flushCommands() {
+  public function flushCommands() {
     $out = $this->commandsRun;
     $this->commandsRun = array();
     return $out;

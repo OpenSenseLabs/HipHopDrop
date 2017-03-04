@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\menu_link_content\Plugin\migrate\process\d7;
 

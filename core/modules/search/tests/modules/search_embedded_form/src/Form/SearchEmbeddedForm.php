@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\search_embedded_form\Form;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -68,7 +68,7 @@ class MockArraySessionStorage implements SessionStorageInterface
      * @param string      $name    Session name
      * @param MetadataBag $metaBag MetadataBag instance
      */
-    public function __construct($name = 'MOCKSESSID', MetadataBag $metaBag = null)
+    public function __construct($name = 'MOCKSESSID', ?MetadataBag $metaBag = null)
     {
         $this->name = $name;
         $this->setMetadataBag($metaBag);
@@ -220,7 +220,7 @@ class MockArraySessionStorage implements SessionStorageInterface
      *
      * @param MetadataBag $bag
      */
-    public function setMetadataBag(MetadataBag $bag = null)
+    public function setMetadataBag(?MetadataBag $bag = null)
     {
         if (null === $bag) {
             $bag = new MetadataBag();

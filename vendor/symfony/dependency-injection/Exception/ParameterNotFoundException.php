@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -30,7 +30,7 @@ class ParameterNotFoundException extends InvalidArgumentException
      * @param \Exception $previous     The previous exception
      * @param string[]   $alternatives Some parameter name alternatives
      */
-    public function __construct($key, $sourceId = null, $sourceKey = null, \Exception $previous = null, array $alternatives = array())
+    public function __construct($key, $sourceId = null, $sourceKey = null, ?\Exception $previous = null, array $alternatives = array())
     {
         $this->key = $key;
         $this->sourceId = $sourceId;

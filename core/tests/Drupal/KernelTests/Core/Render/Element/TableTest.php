@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\KernelTests\Core\Render\Element;
 
@@ -21,7 +21,7 @@ class TableTest extends KernelTestBase {
   /**
    * Tableheader.js provides 'sticky' table headers, and is included by default.
    */
-  function testThemeTableStickyHeaders() {
+  public function testThemeTableStickyHeaders() {
     $header = array('one', 'two', 'three');
     $rows = array(array(1, 2, 3), array(4, 5, 6), array(7, 8, 9));
     $table = array(
@@ -40,7 +40,7 @@ class TableTest extends KernelTestBase {
   /**
    * If $sticky is FALSE, no tableheader.js should be included.
    */
-  function testThemeTableNoStickyHeaders() {
+  public function testThemeTableNoStickyHeaders() {
     $header = array('one', 'two', 'three');
     $rows = array(array(1, 2, 3), array(4, 5, 6), array(7, 8, 9));
     $attributes = array();
@@ -66,7 +66,7 @@ class TableTest extends KernelTestBase {
    * Tests that the table header is printed correctly even if there are no rows,
    * and that the empty text is displayed correctly.
    */
-  function testThemeTableWithEmptyMessage() {
+  public function testThemeTableWithEmptyMessage() {
     $header = array(
       'Header 1',
       array(
@@ -94,7 +94,7 @@ class TableTest extends KernelTestBase {
   /**
    * Tests that the 'no_striping' option works correctly.
    */
-  function testThemeTableWithNoStriping() {
+  public function testThemeTableWithNoStriping() {
     $rows = array(
       array(
         'data' => array(1),
@@ -113,7 +113,7 @@ class TableTest extends KernelTestBase {
   /**
    * Test that the 'footer' option works correctly.
    */
-  function testThemeTableFooter() {
+  public function testThemeTableFooter() {
     $footer = array(
       array(
         'data' => array(1),
@@ -135,7 +135,7 @@ class TableTest extends KernelTestBase {
   /**
    * Tests that the 'header' option in cells works correctly.
    */
-  function testThemeTableHeaderCellOption() {
+  public function testThemeTableHeaderCellOption() {
     $rows = array(
       array(
         array('data' => 1, 'header' => TRUE),

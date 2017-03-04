@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\content_translation\Tests;
 
@@ -79,7 +79,7 @@ class ContentTranslationWorkflowsTest extends ContentTranslationTestBase {
   /**
    * Test simple and editorial translation workflows.
    */
-  function testWorkflows() {
+  public function testWorkflows() {
     // Test workflows for the editor.
     $expected_status = [
       'edit' => 200,

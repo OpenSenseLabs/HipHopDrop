@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\block\EventSubscriber;
 
@@ -26,7 +26,7 @@ class BlockPageDisplayVariantSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events[RenderEvents::SELECT_PAGE_DISPLAY_VARIANT][] = array('onSelectPageDisplayVariant');
     return $events;
   }

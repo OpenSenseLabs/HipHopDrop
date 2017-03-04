@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -30,7 +30,7 @@ class SurrogateListener implements EventSubscriberInterface
      *
      * @param SurrogateInterface $surrogate An SurrogateInterface instance
      */
-    public function __construct(SurrogateInterface $surrogate = null)
+    public function __construct(?SurrogateInterface $surrogate = null)
     {
         $this->surrogate = $surrogate;
     }

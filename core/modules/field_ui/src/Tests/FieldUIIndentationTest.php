@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\field_ui\Tests;
 
@@ -33,7 +33,7 @@ class FieldUIIndentationTest extends WebTestBase {
 
   }
 
-  function testIndentation() {
+  public function testIndentation() {
     $this->drupalGet('admin/structure/types/manage/page/display');
     $this->assertRaw('js-indentation indentation');
   }

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\rdf\Tests;
 
@@ -22,7 +22,7 @@ class GetNamespacesTest extends WebTestBase {
   /**
    * Tests RDF namespaces.
    */
-  function testGetRdfNamespaces() {
+  public function testGetRdfNamespaces() {
     // Fetches the front page and extracts RDFa 1.1 prefixes.
     $this->drupalGet('');
 

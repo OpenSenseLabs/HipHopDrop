@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\batch_test\Form;
 

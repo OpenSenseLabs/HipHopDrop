@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\Form;
 
@@ -21,7 +21,7 @@ class RedirectTest extends WebTestBase {
   /**
    * Tests form redirection.
    */
-  function testRedirect() {
+  public function testRedirect() {
     $path = 'form-test/redirect';
     $options = array('query' => array('foo' => 'bar'));
     $options['absolute'] = TRUE;

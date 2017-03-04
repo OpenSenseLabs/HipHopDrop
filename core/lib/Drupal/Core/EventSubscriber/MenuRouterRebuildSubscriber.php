@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\EventSubscriber;
 
@@ -80,7 +80,7 @@ class MenuRouterRebuildSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     // Run after CachedRouteRebuildSubscriber.
     $events[RoutingEvents::FINISHED][] = array('onRouterRebuild', 100);
     return $events;

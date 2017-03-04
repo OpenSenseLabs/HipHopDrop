@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment\Tests\Views;
 
@@ -20,7 +20,7 @@ class ArgumentUserUIDTest extends CommentTestBase {
    */
   public static $testViews = array('test_comment_user_uid');
 
-  function testCommentUserUIDTest() {
+  public function testCommentUserUIDTest() {
     // Add an additional comment which is not created by the user.
     $new_user = User::create(['name' => 'new user']);
     $new_user->save();

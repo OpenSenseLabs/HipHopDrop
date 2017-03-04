@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\book\Plugin\views\argument_default;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * EasyRdf
@@ -167,7 +167,7 @@ class EasyRdf_Serialiser_Ntriples extends EasyRdf_Serialiser
             $value = $value->toRdfPhp();
         }
 
-        if ($value['type'] == 'uri' or $value['type'] == 'bnode') {
+        if ($value['type'] == 'uri' || $value['type'] == 'bnode') {
             return $this->serialiseResource($value['value']);
         } elseif ($value['type'] == 'literal') {
             $escaped = $this->escapeString($value['value']);

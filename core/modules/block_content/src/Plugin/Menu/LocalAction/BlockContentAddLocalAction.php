@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\block_content\Plugin\Menu\LocalAction;
 

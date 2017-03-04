@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Psr\Log\Test;
 
@@ -14,7 +14,7 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
     /**
      * @return LoggerInterface
      */
-    abstract function getLogger();
+    public abstract function getLogger();
 
     /**
      * This must return the log messages in order with a simple formatting: "<LOG LEVEL> <MESSAGE>"
@@ -23,7 +23,7 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
      *
      * @return string[]
      */
-    abstract function getLogs();
+    public abstract function getLogs();
 
     public function testImplements()
     {
@@ -96,8 +96,8 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
             'string' => 'Foo',
             'int' => 0,
             'float' => 0.5,
-            'nested' => array('with object' => new DummyTest),
-            'object' => new \DateTime,
+            'nested' => array('with object' => new DummyTest()),
+            'object' => new \DateTime(),
             'resource' => fopen('php://memory', 'r'),
         );
 

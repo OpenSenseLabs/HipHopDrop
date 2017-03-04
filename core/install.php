@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * @file
@@ -27,7 +27,7 @@ define('MAINTENANCE_MODE', 'install');
 // load that file yet as it would cause a fatal error on older versions of PHP.
 if (version_compare(PHP_VERSION, '5.5.9') < 0) {
   print 'Your PHP installation is too old. Drupal requires at least PHP 5.5.9. See the <a href="https://www.drupal.org/requirements">system requirements</a> page for more information.';
-  exit;
+  exit(0);
 }
 
 // Initialize the autoloader.

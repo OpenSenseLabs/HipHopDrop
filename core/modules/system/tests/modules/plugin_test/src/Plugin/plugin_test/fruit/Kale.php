@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 namespace Drupal\plugin_test\Plugin\plugin_test\fruit;
 

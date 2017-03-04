@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views_ui\Tests;
 
@@ -27,7 +27,7 @@ class SettingsTest extends UITestBase {
   /**
    * Tests the settings for the edit ui.
    */
-  function testEditUI() {
+  public function testEditUI() {
     $this->drupalLogin($this->adminUser);
 
     // Test the settings tab exists.

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\migrate_query_batch_test\Plugin\migrate\source;
 

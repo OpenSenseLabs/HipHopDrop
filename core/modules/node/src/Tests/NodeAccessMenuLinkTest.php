@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\node\Tests;
 
@@ -42,7 +42,7 @@ class NodeAccessMenuLinkTest extends NodeTestBase {
   /**
    * SA-CORE-2015-003: Tests menu links to nodes when node access is restricted.
    */
-  function testNodeAccessMenuLink() {
+  public function testNodeAccessMenuLink() {
 
     $menu_link_title = $this->randomString();
 

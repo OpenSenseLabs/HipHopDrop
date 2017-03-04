@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\views\Tests\Wizard;
 
@@ -18,7 +18,7 @@ class SortingTest extends WizardTestBase {
   /**
    * Tests the sorting functionality.
    */
-  function testSorting() {
+  public function testSorting() {
     // Create nodes, each with a different creation time so that we can do a
     // meaningful sort.
     $this->drupalCreateContentType(array('type' => 'page'));

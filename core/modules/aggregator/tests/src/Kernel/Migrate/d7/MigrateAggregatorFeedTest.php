@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\aggregator\Kernel\Migrate\d7;
 

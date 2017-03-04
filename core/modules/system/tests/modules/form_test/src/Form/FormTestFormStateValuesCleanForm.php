@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\form_test\Form;
 
@@ -59,7 +59,7 @@ class FormTestFormStateValuesCleanForm extends FormBase {
     // This won't have a proper JSON header, but Drupal doesn't check for that
     // anyway so this is fine until it's replaced with a JsonResponse.
     print Json::encode($form_state->getValues());
-    exit;
+    exit(0);
   }
 
 }

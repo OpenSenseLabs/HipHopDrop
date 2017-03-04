@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\comment\Tests\Views;
 
@@ -22,7 +22,7 @@ class FilterUserUIDTest extends CommentTestBase {
    */
   public static $testViews = array('test_comment_user_uid');
 
-  function testCommentUserUIDTest() {
+  public function testCommentUserUIDTest() {
     $view = Views::getView('test_comment_user_uid');
     $view->setDisplay();
     $view->removeHandler('default', 'argument', 'uid_touch');

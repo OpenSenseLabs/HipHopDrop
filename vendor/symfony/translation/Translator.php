@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -79,7 +79,7 @@ class Translator implements TranslatorInterface, TranslatorBagInterface
      *
      * @throws \InvalidArgumentException If a locale contains invalid characters
      */
-    public function __construct($locale, MessageSelector $selector = null, $cacheDir = null, $debug = false)
+    public function __construct($locale, ?MessageSelector $selector = null, $cacheDir = null, $debug = false)
     {
         $this->setLocale($locale);
         $this->selector = $selector ?: new MessageSelector();
@@ -360,7 +360,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 return \$catalogue;
 
 EOF
-            ,
+,
             $locale,
             var_export($this->catalogues[$locale]->all(), true),
             $fallbackContent
@@ -385,7 +385,7 @@ $catalogue%s = new MessageCatalogue('%s', %s);
 $catalogue%s->addFallbackCatalogue($catalogue%s);
 
 EOF
-                ,
+,
                 $fallbackSuffix,
                 $fallback,
                 var_export($fallbackCatalogue->all(), true),

@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 /**
  * @file
@@ -184,7 +184,7 @@ function _drupal_log_error($error, $fatal = FALSE) {
       // Should not translate the string to avoid errors producing more errors.
       $response->setContent(html_entity_decode(strip_tags(SafeMarkup::format('%type: @message in %function (line %line of %file).', $error))) . "\n");
       $response->send();
-      exit;
+      exit(0);
     }
   }
 
@@ -196,7 +196,7 @@ function _drupal_log_error($error, $fatal = FALSE) {
         $response->setContent(SafeMarkup::format('%type: @message in %function (line %line of %file).', $error));
         $response->send();
       }
-      exit;
+      exit(0);
     }
   }
   else {
@@ -262,7 +262,7 @@ function _drupal_log_error($error, $fatal = FALSE) {
           '#markup' => $message,
         );
         install_display_output($output, $GLOBALS['install_state'], $response->headers->all());
-        exit;
+        exit(0);
       }
 
       $response->setContent($message);
@@ -270,7 +270,7 @@ function _drupal_log_error($error, $fatal = FALSE) {
 
       $response->send();
       // An exception must halt script execution.
-      exit;
+      exit(0);
     }
 
     if ($message) {

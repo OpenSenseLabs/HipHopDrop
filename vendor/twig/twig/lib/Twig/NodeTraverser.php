@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of Twig.
@@ -68,7 +68,7 @@ class Twig_NodeTraverser
         return $node;
     }
 
-    protected function traverseForVisitor(Twig_NodeVisitorInterface $visitor, Twig_NodeInterface $node = null)
+    protected function traverseForVisitor(Twig_NodeVisitorInterface $visitor, ?Twig_NodeInterface $node = null)
     {
         if (null === $node) {
             return;

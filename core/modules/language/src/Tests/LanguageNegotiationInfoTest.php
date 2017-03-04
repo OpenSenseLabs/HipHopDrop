@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\language\Tests;
 
@@ -61,7 +61,7 @@ class LanguageNegotiationInfoTest extends WebTestBase {
   /**
    * Tests alterations to language types/negotiation info.
    */
-  function testInfoAlterations() {
+  public function testInfoAlterations() {
     $this->stateSet(array(
       // Enable language_test type info.
       'language_test.language_types' => TRUE,

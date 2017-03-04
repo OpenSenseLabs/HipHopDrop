@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\Tests\inline_form_errors\FunctionalJavascript;
 

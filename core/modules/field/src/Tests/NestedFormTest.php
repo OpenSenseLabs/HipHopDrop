@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\field\Tests;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
@@ -52,7 +52,7 @@ class NestedFormTest extends FieldTestBase {
   /**
    * Tests Field API form integration within a subform.
    */
-  function testNestedFieldForm() {
+  public function testNestedFieldForm() {
     // Add two fields on the 'entity_test'
     FieldStorageConfig::create($this->fieldStorageSingle)->save();
     FieldStorageConfig::create($this->fieldStorageUnlimited)->save();

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\ckeditor\Plugin\CKEditorPlugin;
 
@@ -126,7 +126,7 @@ class Language extends CKEditorPluginBase implements CKEditorPluginConfigurableI
   /**
    * {@inheritdoc}
    */
-  function getCssFiles(Editor $editor) {
+  public function getCssFiles(Editor $editor) {
     return array(
         drupal_get_path('module', 'ckeditor') . '/css/plugins/language/ckeditor.language.css'
     );

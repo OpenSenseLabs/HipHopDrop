@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 namespace Masterminds\HTML5\Parser;
 
 use Masterminds\HTML5\Elements;

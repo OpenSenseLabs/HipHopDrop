@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -37,7 +37,7 @@ class ExpressionValidator extends ConstraintValidator
      */
     private $expressionLanguage;
 
-    public function __construct(PropertyAccessorInterface $propertyAccessor = null, ExpressionLanguage $expressionLanguage = null)
+    public function __construct(?PropertyAccessorInterface $propertyAccessor = null, ?ExpressionLanguage $expressionLanguage = null)
     {
         $this->propertyAccessor = $propertyAccessor;
         $this->expressionLanguage = $expressionLanguage;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\KernelTests\Core\Entity;
 
@@ -43,7 +43,7 @@ class EntityAutocompleteTest extends EntityKernelTestBase {
   /**
    * Tests autocompletion edge cases with slashes in the names.
    */
-  function testEntityReferenceAutocompletion() {
+  public function testEntityReferenceAutocompletion() {
     // Add an entity with a slash in its name.
     $entity_1 = $this->container->get('entity_type.manager')
       ->getStorage($this->entityType)

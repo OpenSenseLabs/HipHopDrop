@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -233,7 +233,7 @@ final class DocParser
      */
     public function __construct()
     {
-        $this->lexer = new DocLexer;
+        $this->lexer = new DocLexer();
     }
 
     /**

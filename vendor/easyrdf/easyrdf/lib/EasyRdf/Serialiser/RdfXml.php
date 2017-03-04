@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * EasyRdf
  *
@@ -61,23 +61,23 @@ class EasyRdf_Serialiser_RdfXml extends EasyRdf_Serialiser
             $property = substr($property, 1);
         }
 
-        if (is_object($obj) and $obj instanceof EasyRdf_Resource) {
+        if (is_object($obj) && $obj instanceof EasyRdf_Resource) {
             $pcount = count($obj->propertyUris());
             $rpcount = $this->reversePropertyCount($obj);
             $alreadyOutput = isset($this->outputtedResources[$obj->getUri()]);
 
             $tag = "{$indent}<{$property}";
             if ($obj->isBNode()) {
-                if ($alreadyOutput or $rpcount > 1 or $pcount == 0) {
+                if ($alreadyOutput || $rpcount > 1 || $pcount == 0) {
                     $tag .= " rdf:nodeID=\"".htmlspecialchars($obj->getBNodeId()).'"';
                 }
             } else {
-                if ($alreadyOutput or $rpcount != 1 or $pcount == 0) {
+                if ($alreadyOutput || $rpcount != 1 || $pcount == 0) {
                     $tag .= " rdf:resource=\"".htmlspecialchars($obj->getURI()).'"';
                 }
             }
 
-            if ($alreadyOutput == false and $rpcount == 1 and $pcount > 0) {
+            if ($alreadyOutput == false && $rpcount == 1 && $pcount > 0) {
                 $xml = $this->rdfxmlResource($obj, false, $depth+1);
                 if ($xml) {
                     return "$tag>$xml$indent</$property>\n\n";
@@ -88,7 +88,7 @@ class EasyRdf_Serialiser_RdfXml extends EasyRdf_Serialiser
                 return $tag."/>\n";
             }
 
-        } elseif (is_object($obj) and $obj instanceof EasyRdf_Literal) {
+        } elseif (is_object($obj) && $obj instanceof EasyRdf_Literal) {
             $atrributes = "";
             $datatype = $obj->getDatatypeUri();
             if ($datatype) {

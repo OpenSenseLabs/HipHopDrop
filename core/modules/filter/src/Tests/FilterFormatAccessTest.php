@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\filter\Tests;
 
@@ -118,7 +118,7 @@ class FilterFormatAccessTest extends WebTestBase {
   /**
    * Tests the Filter format access permissions functionality.
    */
-  function testFormatPermissions() {
+  public function testFormatPermissions() {
     // Make sure that a regular user only has access to the text formats for
     // which they were granted access.
     $fallback_format = FilterFormat::load(filter_fallback_format());
@@ -181,7 +181,7 @@ class FilterFormatAccessTest extends WebTestBase {
   /**
    * Tests if text format is available to a role.
    */
-  function testFormatRoles() {
+  public function testFormatRoles() {
     // Get the role ID assigned to the regular user.
     $roles = $this->webUser->getRoles(TRUE);
     $rid = $roles[0];
@@ -211,7 +211,7 @@ class FilterFormatAccessTest extends WebTestBase {
    * be edited by administrators only, but that the administrator is forced to
    * choose a new format before saving the page.
    */
-  function testFormatWidgetPermissions() {
+  public function testFormatWidgetPermissions() {
     $body_value_key = 'body[0][value]';
     $body_format_key = 'body[0][format]';
 

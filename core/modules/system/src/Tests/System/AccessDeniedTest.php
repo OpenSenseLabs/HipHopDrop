@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\system\Tests\System;
 
@@ -36,7 +36,7 @@ class AccessDeniedTest extends WebTestBase {
     user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('access user profiles'));
   }
 
-  function testAccessDenied() {
+  public function testAccessDenied() {
     $this->drupalGet('admin');
     $this->assertText(t('Access denied'), 'Found the default 403 page');
     $this->assertResponse(403);

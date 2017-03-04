@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\datetime_range\Plugin\Field\FieldType;
 

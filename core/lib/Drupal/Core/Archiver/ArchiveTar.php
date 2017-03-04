@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 // @codingStandardsIgnoreFile
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
@@ -276,7 +276,7 @@ class ArchiveTar
     * @param string $ext The extension name
     * @return bool Success or not on the dl() call
     */
-    function loadExtension($ext)
+    public function loadExtension($ext)
     {
         if (extension_loaded($ext)) {
             return true;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -23,5 +23,5 @@ interface ContainerAwareInterface
      *
      * @param ContainerInterface|null $container A ContainerInterface instance or null
      */
-    public function setContainer(ContainerInterface $container = null);
+    public function setContainer(?ContainerInterface $container = null);
 }

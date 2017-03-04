@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\views\Plugin\views\filter;
 
@@ -128,7 +128,7 @@ class Combine extends StringFilter {
    * By default things like opEqual uses add_where, that doesn't support
    * complex expressions, so override opEqual (and all operators below).
    */
-  function opEqual($expression) {
+  public function opEqual($expression) {
     $placeholder = $this->placeholder();
     $operator = $this->operator();
     $this->query->addWhereExpression($this->options['group'], "$expression $operator $placeholder", array($placeholder => $this->value));

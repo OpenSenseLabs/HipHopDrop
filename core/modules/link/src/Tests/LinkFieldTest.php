@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\link\Tests;
 
@@ -52,7 +52,7 @@ class LinkFieldTest extends WebTestBase {
   /**
    * Tests link field URL validation.
    */
-  function testURLValidation() {
+  public function testURLValidation() {
     $field_name = Unicode::strtolower($this->randomMachineName());
     // Create a field with settings to validate.
     $this->fieldStorage = FieldStorageConfig::create(array(
@@ -223,7 +223,7 @@ class LinkFieldTest extends WebTestBase {
   /**
    * Tests the link title settings of a link field.
    */
-  function testLinkTitle() {
+  public function testLinkTitle() {
     $field_name = Unicode::strtolower($this->randomMachineName());
     // Create a field with settings to validate.
     $this->fieldStorage = FieldStorageConfig::create(array(
@@ -337,7 +337,7 @@ class LinkFieldTest extends WebTestBase {
   /**
    * Tests the default 'link' formatter.
    */
-  function testLinkFormatter() {
+  public function testLinkFormatter() {
     $field_name = Unicode::strtolower($this->randomMachineName());
     // Create a field with settings to validate.
     $this->fieldStorage = FieldStorageConfig::create(array(
@@ -492,7 +492,7 @@ class LinkFieldTest extends WebTestBase {
    * This test is mostly the same as testLinkFormatter(), but they cannot be
    * merged, since they involve different configuration and output.
    */
-  function testLinkSeparateFormatter() {
+  public function testLinkSeparateFormatter() {
     $field_name = Unicode::strtolower($this->randomMachineName());
     // Create a field with settings to validate.
     $this->fieldStorage = FieldStorageConfig::create(array(

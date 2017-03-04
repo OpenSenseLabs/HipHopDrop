@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 namespace Drupal\Core\Database\Driver\pgsql;
 
@@ -361,7 +361,7 @@ class Schema extends DatabaseSchema {
    * This maps a generic data type in combination with its data size
    * to the engine-specific data type.
    */
-  function getFieldTypeMap() {
+  public function getFieldTypeMap() {
     // Put :normal last so it gets preserved by array_flip. This makes
     // it much easier for modules (such as schema.module) to map
     // database types back into schema types.
@@ -446,7 +446,7 @@ class Schema extends DatabaseSchema {
     return (bool) $this->connection->query("SELECT 1 FROM pg_tables WHERE schemaname = :schema AND tablename = :table", array(':schema' => $prefixInfo['schema'], ':table' => $prefixInfo['table']))->fetchField();
   }
 
-  function renameTable($table, $new_name) {
+  public function renameTable($table, $new_name) {
     if (!$this->tableExists($table)) {
       throw new SchemaObjectDoesNotExistException(t("Cannot rename @table to @table_new: table @table doesn't exist.", array('@table' => $table, '@table_new' => $new_name)));
     }
@@ -639,7 +639,7 @@ class Schema extends DatabaseSchema {
     return TRUE;
   }
 
-  function addUniqueKey($table, $name, $fields) {
+  public function addUniqueKey($table, $name, $fields) {
     if (!$this->tableExists($table)) {
       throw new SchemaObjectDoesNotExistException(t("Cannot add unique key @name to table @table: table doesn't exist.", array('@table' => $table, '@name' => $name)));
     }

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\plugin_test\Plugin\Annotation;
 

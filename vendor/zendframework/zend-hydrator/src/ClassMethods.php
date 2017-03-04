@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -93,7 +93,7 @@ class ClassMethods extends AbstractHydrator implements HydratorOptionsInterface
         $this->underscoreSeparatedKeys = (bool) $underscoreSeparatedKeys;
 
         if ($this->underscoreSeparatedKeys) {
-            $this->setNamingStrategy(new NamingStrategy\UnderscoreNamingStrategy);
+            $this->setNamingStrategy(new NamingStrategy\UnderscoreNamingStrategy());
         } elseif ($this->getNamingStrategy() instanceof NamingStrategy\UnderscoreNamingStrategy) {
             $this->removeNamingStrategy();
         }

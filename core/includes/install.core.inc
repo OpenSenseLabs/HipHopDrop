@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 /**
  * @file
@@ -315,7 +315,7 @@ function install_begin_request($class_loader, &$install_state) {
   $user_agent = $request->cookies->get('SIMPLETEST_USER_AGENT') ?: $request->server->get('HTTP_USER_AGENT');
   if ($install_state['interactive'] && strpos($user_agent, 'simpletest') !== FALSE && !drupal_valid_test_ua()) {
     header($request->server->get('SERVER_PROTOCOL') . ' 403 Forbidden');
-    exit;
+    exit(0);
   }
 
   $site_path = DrupalKernel::findSitePath($request, FALSE);
@@ -622,7 +622,7 @@ function install_run_task($task, &$install_state) {
         }
         // Send the response.
         $response->send();
-        exit;
+        exit(0);
       }
     }
     // If we are in the middle of processing this batch, keep sending back
@@ -1005,7 +1005,7 @@ function install_display_output($output, $install_state) {
   );
   $response->headers->add($default_headers);
   $response->send();
-  exit;
+  exit(0);
 }
 
 /**

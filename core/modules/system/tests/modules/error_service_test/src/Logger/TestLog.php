@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 namespace Drupal\error_service_test\Logger;
 

@@ -1,4 +1,4 @@
-<?php
+<?hh // decl
 
 /**
  * EasyRdf
@@ -93,7 +93,7 @@ class EasyRdf_Format
     {
         $accept = $extraTypes;
         foreach (self::$formats as $format) {
-            if ($format->parserClass and count($format->mimeTypes) > 0) {
+            if ($format->parserClass && count($format->mimeTypes) > 0) {
                 $accept = array_merge($accept, $format->mimeTypes);
             }
         }
@@ -131,16 +131,16 @@ class EasyRdf_Format
      */
     public static function getFormat($query)
     {
-        if (!is_string($query) or $query == null or $query == '') {
+        if (!is_string($query) || $query == null || $query == '') {
             throw new InvalidArgumentException(
                 "\$query should be a string and cannot be null or empty"
             );
         }
 
         foreach (self::$formats as $format) {
-            if ($query == $format->name or
-                $query == $format->uri or
-                array_key_exists($query, $format->mimeTypes) or
+            if ($query == $format->name ||
+                $query == $format->uri ||
+                array_key_exists($query, $format->mimeTypes) ||
                 in_array($query, $format->extensions)) {
                 return $format;
             }
@@ -168,7 +168,7 @@ class EasyRdf_Format
         $mimeTypes = array(),
         $extensions = array()
     ) {
-        if (!is_string($name) or $name == null or $name == '') {
+        if (!is_string($name) || $name == null || $name == '') {
             throw new InvalidArgumentException(
                 "\$name should be a string and cannot be null or empty"
             );
@@ -238,7 +238,7 @@ class EasyRdf_Format
         }
 
         // First try and identify by the filename
-        if ($filename and preg_match('/\.(\w+)$/', $filename, $matches)) {
+        if ($filename && preg_match('/\.(\w+)$/', $filename, $matches)) {
             foreach (self::$formats as $format) {
                 if (in_array($matches[1], $format->extensions)) {
                     return $format;

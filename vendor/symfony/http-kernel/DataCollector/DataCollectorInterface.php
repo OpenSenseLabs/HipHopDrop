@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * This file is part of the Symfony package.
@@ -28,7 +28,7 @@ interface DataCollectorInterface
      * @param Response   $response  A Response instance
      * @param \Exception $exception An Exception instance
      */
-    public function collect(Request $request, Response $response, \Exception $exception = null);
+    public function collect(Request $request, Response $response, ?\Exception $exception = null);
 
     /**
      * Returns the name of the collector.

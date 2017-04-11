@@ -1,23 +1,4 @@
-<?php
 
-/**
- * @file
- * Default theme implementation for printed version of book outline.
- *
- * Available variables:
- * - $title: Top level node title.
- * - $head: Header tags.
- * - $language: Language code. e.g. "en" for english.
- * - $language_rtl: TRUE or FALSE depending on right to left language scripts.
- * - $base_url: URL to home page.
- * - $contents: Nodes within the current outline rendered through
- *   book-node-export-html.tpl.php.
- *
- * @see template_preprocess_book_export_html()
- *
- * @ingroup themeable
- */
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language; ?>" xml:lang="<?php print $language->language; ?>" dir="<?php print $dir; ?>">
   <head>

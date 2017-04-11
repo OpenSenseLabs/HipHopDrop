@@ -1,12 +1,3 @@
-<?php
-
-/**
- * @file
- * Custom theme implementation to display a single Drupal page without
- * sidebars. The sidebars are hidden by regions_hidden for this theme, so
- * the default page.tpl.php will not work without throwing exceptions.
- */
-?>
 
   <div id="page-wrapper"><div id="page">
 

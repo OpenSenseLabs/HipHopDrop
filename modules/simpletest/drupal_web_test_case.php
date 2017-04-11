@@ -1,4 +1,4 @@
-<?php
+<?hh // strict
 
 /**
  * Global variable that holds information about the tests being run.
@@ -705,7 +705,7 @@ class DrupalUnitTestCase extends DrupalTestCase {
   /**
    * Constructor for DrupalUnitTestCase.
    */
-  function __construct($test_id = NULL) {
+  public function __construct($test_id = NULL) {
     parent::__construct($test_id);
     $this->skipClasses[__CLASS__] = TRUE;
   }
@@ -914,7 +914,7 @@ class DrupalWebTestCase extends DrupalTestCase {
   /**
    * Constructor for DrupalWebTestCase.
    */
-  function __construct($test_id = NULL) {
+  public function __construct($test_id = NULL) {
     parent::__construct($test_id);
     $this->skipClasses[__CLASS__] = TRUE;
   }
@@ -930,7 +930,7 @@ class DrupalWebTestCase extends DrupalTestCase {
    * @return
    *   A node object matching $title.
    */
-  function drupalGetNodeByTitle($title, $reset = FALSE) {
+  public function drupalGetNodeByTitle($title, $reset = FALSE) {
     $nodes = node_load_multiple(array(), array('title' => $title), $reset);
     // Load the first node returned from the database.
     $returned_node = reset($nodes);
